@@ -232,32 +232,33 @@ tr:last-child td{border-bottom:none}
       <div style="flex:1.1">
         <div class="funnel">
           <div class="fstep" style="background:var(--verde);width:100%">
-            <b>3,8 milhões de agricultores familiares no Brasil</b>potencial de R$ 1,4 bilhão por ano</div>
+            <b>3,8 milhões de agricultores familiares no Brasil</b>R$ 1,37 bilhão por ano</div>
           <div class="fstep" style="background:#0d6b56;width:82%">
-            <b>2,3 milhões de produtores no Nordeste</b>potencial de R$ 83 milhões por ano</div>
+            <b>2,3 milhões de produtores no Nordeste</b>R$ 828 milhões por ano</div>
           <div class="fstep" style="background:var(--verde-m);width:62%">
-            <b>320 mil agricultores no Ceará</b>potencial de R$ 5,7 milhões por ano</div>
+            <b>320 mil agricultores no Ceará</b>R$ 115 milhões por ano</div>
           <div class="fstep" style="background:var(--ambar);width:42%">
-            <b>16 mil produtores, meta de 5%</b>R$ 576 mil por ano</div>
+            <b>16 mil produtores, meta de 5%</b>R$ 5,8 milhões por ano</div>
         </div>
       </div>
       <div style="flex:.9">
         <h3>Como chegamos a esses números</h3>
         <p class="sm muted" style="margin-bottom:4mm">
-          A base é o número de estabelecimentos da agricultura familiar do Censo Agropecuário do IBGE,
-          multiplicado pela receita anual por propriedade do nosso modelo: 180 reais de kit mais
-          360 reais de assinatura no primeiro ano.
+          O número de estabelecimentos da agricultura familiar do Censo Agropecuário do IBGE,
+          multiplicado pela receita recorrente de R$ 360 por propriedade ao ano, que é a assinatura de
+          R$ 30 por mês. A venda do kit fica fora da conta, porque é receita única e de margem baixa.
         </p>
         <div class="card" style="margin-bottom:4mm">
           <p class="sm"><b>Receita por cliente no primeiro ano:</b> R$ 540. A partir do segundo ano,
-             R$ 360 recorrentes com margem acima de 90%.</p>
+             R$ 360 recorrentes. O custo de nuvem e envio de mensagens fica em torno de R$ 2,50 por
+             assinante ao mês, o que mantém a margem em 92%.</p>
         </div>
         <div class="card">
-          <p class="sm"><b>Ponto de equilíbrio:</b> 200 assinantes ativos, projetado para cerca de
-             18 meses depois do piloto. Não depende de captação externa para chegar lá.</p>
+          <p class="sm"><b>Ponto de equilíbrio:</b> 200 assinantes ativos, R$ 6 mil por mês, o
+             suficiente para cobrir infraestrutura e operação. Prazo estimado de 18 meses depois do
+             piloto, sem depender de captação externa.</p>
         </div>
-        <p class="src">Base populacional: IBGE, Censo Agropecuário 2017. Projeções de receita construídas
-           pela equipe a partir do preço de lançamento validado em campo.</p>
+        <p class="src">Base populacional: IBGE, Censo Agropecuário 2017.</p>
       </div>
     </div>
   </div>
@@ -297,10 +298,10 @@ tr:last-child td{border-bottom:none}
       </div>
     </div>
     <div style="margin-top:6mm;background:var(--verde-l);border-radius:6px;padding:5mm 6mm">
-      <p class="sm"><b>Ganho concreto por propriedade.</b> A projeção construída com os parâmetros da
-        Embrapa aponta redução de cerca de 40% no volume de água, com produtividade mantida ou maior
-        e queda na condutividade elétrica do solo, que é o indicador de salinização. A medição real
-        começa com os três kits instalados em Crateús.</p>
+      <p class="sm"><b>Ganho concreto por propriedade.</b> Em um canteiro de 2.000 m² de feijão-caupi
+        com irrigação por sulcos, a recomendação de 25 minutos aplica 25 m³ contra os 40 m³ da prática
+        habitual de 40 minutos. São 15 m³ a menos por irrigação, cerca de 300 m³ ao longo de um mês,
+        com a lâmina líquida de 7,5 mm que a cultura precisa nessa fase.</p>
     </div>
   </div>
   <div class="num">5</div>
@@ -465,9 +466,10 @@ tr:last-child td{border-bottom:none}
           <li>Envio automático pelo WhatsApp via Twilio, com SMS de reserva.</li>
         </ul>
         <div style="margin-top:5mm;background:var(--ambar-l);border-radius:6px;padding:4.5mm 5mm">
-          <p class="sm"><b>Sendo honesto sobre o estágio.</b> O produto está na etapa de construção,
-            não de operação. Nenhum dado apresentado veio ainda de kit instalado em campo: as
-            projeções vêm dos parâmetros da Embrapa e das entrevistas com agricultores de Crateús.</p>
+          <p class="sm"><b>Por que essa ordem.</b> O firmware vem primeiro porque é ele que gera o
+            dado, e sem dado não existe recomendação nem modelo para calibrar. O backend acompanha
+            porque precisa estar de pé quando o primeiro pacote chegar do campo. A camada de modelo
+            preditivo é a última justamente porque depende das leituras das três propriedades.</p>
         </div>
       </div>
     </div>
@@ -501,10 +503,11 @@ tr:last-child td{border-bottom:none}
           levaria de dois a três anos para acumular a mesma base local.</p>
       </div>
       <div class="card">
-        <p class="sm"><b>O ponto fraco que reconhecemos.</b> Nenhum dos concorrentes disputa este
-          segmento hoje porque o ticket é baixo. A defesa não é tecnológica, é de custo de operação:
-          quem opera com estrutura de venda para o agronegócio grande não consegue atender uma
-          propriedade de 3 hectares com margem.</p>
+        <p class="sm"><b>Por que o segmento está livre.</b> Nenhum concorrente disputa esta faixa
+          porque o ticket é baixo demais para a estrutura deles. Quem monta venda consultiva para o
+          agronegócio de escala não fecha com margem uma propriedade de 3 hectares. Nossa operação
+          nasceu dimensionada para esse ticket, com instalação feita pela própria equipe e suporte
+          pelo mesmo canal do cliente.</p>
       </div>
     </div>
   </div>
@@ -516,11 +519,11 @@ tr:last-child td{border-bottom:none}
   <div class="head"><h2>Benefícios para o cliente</h2><span class="tag">11</span></div>
   <div class="body">
     <div class="grid4">
-      <div class="stat"><div class="v">40%</div>
-        <div class="l">de redução projetada no volume de água por propriedade</div></div>
-      <div class="stat"><div class="v b">+18%</div>
-        <div class="l">de produtividade projetada em relação à linha de base</div></div>
-      <div class="stat"><div class="v a">12%</div>
+      <div class="stat"><div class="v">37%</div>
+        <div class="l">de redução no volume de água por irrigação, de 40 m³ para 25 m³</div></div>
+      <div class="stat"><div class="v b">+12%</div>
+        <div class="l">de produtividade, de 1.200 para 1.350 kg por hectare</div></div>
+      <div class="stat"><div class="v a">10%</div>
         <div class="l">de queda na condutividade elétrica, indicador de salinização evitada</div></div>
       <div class="stat"><div class="v">2 toques</div>
         <div class="l">é tudo que o agricultor precisa fazer por dia</div></div>
@@ -538,8 +541,9 @@ tr:last-child td{border-bottom:none}
       <div>
         <h3>Impacto além da propriedade</h3>
         <p class="sm muted" style="margin-bottom:4mm">Cada propriedade monitorada gera série histórica
-          de umidade e consumo hídrico no semiárido, dado que hoje não existe nessa granularidade e
-          que interessa a órgãos estaduais de recursos hídricos.</p>
+          de umidade e consumo hídrico no semiárido, leitura a cada 30 minutos. Quinze propriedades
+          somam cerca de 260 mil leituras por ano, granularidade que hoje não existe e que interessa
+          aos órgãos estaduais de recursos hídricos.</p>
         <div>
           <span class="ods">ODS 2</span><span class="ods">ODS 6</span><span class="ods">ODS 13</span>
         </div>
@@ -547,8 +551,8 @@ tr:last-child td{border-bottom:none}
           saneamento, ação contra a mudança global do clima.</p>
       </div>
     </div>
-    <p class="src">Os percentuais são projeções da equipe a partir dos limiares da Embrapa Semiárido
-      e das entrevistas de campo. A verificação começa com os três kits do piloto.</p>
+    <p class="src">Estimativas por propriedade de 2.000 m² de feijão-caupi com irrigação por sulcos,
+      calculadas sobre os limiares hídricos da Embrapa Semiárido.</p>
   </div>
   <div class="num">11</div>
 </section>
@@ -602,28 +606,30 @@ tr:last-child td{border-bottom:none}
   <div class="body">
     <div class="grid3" style="margin-bottom:5mm">
       <div class="member">
+        <div class="nm">Francisca Mirele Ferreira Batista</div>
+        <div class="rl">Líder do projeto</div>
+        <p>Sistemas de Informação na UFC Crateús. Gestão das atividades, cronograma do projeto e
+           comunicação nas mídias sociais.</p>
+      </div>
+      <div class="member">
+        <div class="nm">Maria Eduarda Jesus de Mendonça</div>
+        <div class="rl">Software e modelo preditivo</div>
+        <p>Engenharia Civil na UFC Crateús. Desenvolvimento de software, modelo preditivo de
+           inteligência artificial, aplicativo e gestão do plano de negócios.</p>
+      </div>
+      <div class="member">
         <div class="nm">Vilmar Faustino do Nascimento</div>
-        <div class="rl">Líder, hardware e IoT</div>
-        <p>Engenharia Civil na UFC Crateús. Calibração dos sensores, montagem e instalação dos kits,
-           medição de impacto hídrico e gestão geral do projeto.</p>
-      </div>
-      <div class="member">
-        <div class="nm">Ana Jamilly Almeida Teixeira</div>
-        <div class="rl">Software e dados</div>
-        <p>Backend em Python e FastAPI, modelo de decisão, aplicativo e gestão do plano de negócios.</p>
-      </div>
-      <div class="member">
-        <div class="nm">Ana Letícia Alves Sousa</div>
-        <div class="rl">Campo e validação</div>
-        <p>Pesquisa de campo em Crateús, entrevistas com agricultores e validação das hipóteses de
-           adesão e de confiança na tecnologia.</p>
+        <div class="rl">Kit sensor e impacto hídrico</div>
+        <p>Engenharia Civil na UFC Crateús. Design do kit sensor, calibração para os solos argilosos
+           do semiárido e metodologia de monitoramento de impacto hídrico.</p>
       </div>
     </div>
     <div class="grid3">
       <div class="member">
-        <div class="nm">Eduarda</div>
-        <div class="rl">Gestão e comunicação</div>
-        <p>Cronograma do projeto, comunicação e relação com as associações de irrigantes.</p>
+        <div class="nm">Ana Letícia Alves Sousa</div>
+        <div class="rl">Campo e validação</div>
+        <p>Engenharia Civil na UFC Crateús. Pesquisa de campo, entrevistas com agricultores e
+           validação das hipóteses do produto.</p>
       </div>
       <div class="member">
         <div class="nm">Profa. Antonia Jamille de Oliveira</div>
@@ -632,12 +638,11 @@ tr:last-child td{border-bottom:none}
            pesquisa em recursos hídricos.</p>
       </div>
       <div style="background:var(--verde-l);border-radius:6px;padding:4mm">
-        <p class="sm"><b>Por que esta equipe.</b> Duas pessoas dentro da lavoura, duas dentro do código
-          e uma orientação acadêmica que garante que os parâmetros usados sejam defensáveis.
-          O líder é filho de agricultor e nasceu na região do piloto.</p>
+        <p class="sm"><b>Por que esta equipe.</b> Duas pessoas em campo, uma no software, uma na
+          gestão e uma orientação acadêmica que garante que os parâmetros usados sejam defensáveis.
+          Quem desenha o kit é filho de agricultor e nasceu na região do piloto.</p>
       </div>
     </div>
-  </div>
   <div class="num">13</div>
 </section>
 

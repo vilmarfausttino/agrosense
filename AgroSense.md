@@ -41,7 +41,8 @@ Vilmar (o usuário) trabalha com Claude Code no terminal para:
 - **Tipo de trabalho:** Pitch
 - **ODS:** 2, 6, 13
 - **Autor principal:** Vilmar Faustino do Nascimento (matrícula 09154719305, vilmarfaustino@alu.ufc.br)
-- **Coautores:** Ana Jamilly Almeida Teixeira, Ana Letícia Alves Sousa, Eduarda [sobrenome], Antonia Jamille de Oliveira
+- **Coautores:** Francisca Mirele Ferreira Batista, Maria Eduarda Jesus de Mendonça, Ana Letícia Alves Sousa, Antonia Jamille de Oliveira
+- **Atenção:** a autoria dos EU2026 precisa ser conferida contra o Anexo IV antes da submissão
 - **Título:** "AgroSense: plataforma de irrigação inteligente para agricultores familiares do semiárido cearense"
 - **Palavras-chave:** Irrigação inteligente — IoT — Semiárido
 - **Resumo:** produzido (~1.650 caracteres), pronto para colar no formulário dos EU2026
@@ -106,34 +107,40 @@ Kit sensor de baixo custo + plataforma de IA em nuvem + alerta diário via Whats
 
 ## 3. EQUIPE
 
-### Membros
+Composição oficial conforme o Anexo IV, Termo de Atualização da Formação de Equipe,
+PIBI/UFC, vigente a partir de 16/05/2026. Esta lista substitui qualquer versão anterior.
 
-**Vilmar Faustino do Nascimento** (Líder, Bolsista — Hardware e IoT)
-- Estudante de Engenharia Civil, UFC Crateús, ingresso 2022, formatura prevista dezembro 2026
-- Nascido em Crateús-CE (2003), criado em Ipaporanga-CE
-- Primeiro da família a cursar ensino superior (mãe é doméstica, pai é agricultor)
-- Escola fundamental: Escola Governador Waldemar de Alcântara (Ipaporanga) — pública
-- Ensino médio + técnico em Comércio: Escola de Ensino Profissionalizante Manoel Mano (Crateús) — pública
-- Habilidades técnicas: Python, R, Java, C#, C++, MATLAB, SQL, VBA, Bash/Shell Script, HTML, automação de tarefas
+**Francisca Mirele Ferreira Batista** (Líder do projeto, Bolsista)
+- Matrícula 585399, Sistemas de Informação, UFC Crateús, 3º semestre, conclusão prevista 2028.2
+- Responsabilidade: gestão das atividades, cronograma e comunicação do projeto nas mídias sociais
+
+**Ana Letícia Alves Sousa** (Bolsista)
+- Matrícula 583131, Engenharia Civil, UFC Crateús, 9º semestre, conclusão prevista 2027.2
+- Responsabilidade: pesquisa de campo, entrevistas com agricultores e validação das hipóteses do produto
+
+**Vilmar Faustino do Nascimento** (Voluntário)
+- Matrícula 538743, Engenharia Civil, UFC Crateús, 9º semestre, conclusão prevista 2027.2
+- Responsabilidade: design do kit sensor, calibração de sensores para solos argilosos do semiárido
+  e metodologia de monitoramento de impacto hídrico
+- E-mail pessoal: vilmarfaustinok@gmail.com, e-mail UFC: vilmarfaustino@alu.ufc.br
+- Nascido em Crateús-CE (2003), criado em Ipaporanga-CE, primeiro da família a cursar ensino superior
+- Habilidades técnicas: Python, R, Java, C#, C++, MATLAB, SQL, VBA, Bash, HTML
 - Ferramentas de engenharia: AutoCAD, Revit, SketchUp, Eberick, TQS, SAP2000
-- Áreas de interesse: estruturas de concreto armado/protendido, reforço estrutural, engenharia de transportes, IoT como ferramenta complementar à engenharia
-- Histórico profissional: AgroSense (jan-jul 2023) → Hashtag Treinamentos (jan 2024 - dez 2025) → SoRe Struct Engenharia, estagiário de projetos estruturais (fev 2026 - jul 2026)
-- Responsabilidade no projeto: calibração dos sensores para solos do semiárido, monitoramento de impacto hídrico, montagem dos kits, instalação em campo, gestão geral
-- E-mail pessoal: vilmarfaustinok@gmail.com
-- E-mail UFC: vilmarfaustino@alu.ufc.br
 
-**Ana Jamilly Almeida Teixeira** (Bolsista — Software e Dados)
-- Responsabilidade: backend Python/FastAPI, modelo de IA, app mobile, gestão do plano de negócios
+**Maria Eduarda Jesus de Mendonça** (Voluntária)
+- Engenharia Civil, UFC Crateús, 9º semestre, conclusão prevista 2028.2
+- Responsabilidade: desenvolvimento de software, modelo preditivo de IA, app mobile
+  e gestão do plano de negócios
 
-**Ana Letícia Alves Sousa** (Bolsista — Campo e Validação)
-- Responsabilidade: pesquisa de campo em Crateús, entrevistas com agricultores, validação das hipóteses H1 e H6
+**Profa. Antonia Jamille de Oliveira** (Orientadora)
+- Professora, Departamento de Estruturas, Unidade Estruturas, Campus de Crateús
+- Responsabilidade: rigor técnico-científico, conexão com pesquisa em recursos hídricos
 
-**Eduarda [sobrenome pendente]** (Voluntária — Gestão e Comunicação)
-- Responsabilidade: gestão das atividades do programa, cronograma, comunicação do projeto, validação H4
+**Saiu da equipe:** Ana Jamilly Almeida Teixeira não consta no Anexo IV vigente.
+As atribuições de software e modelo preditivo passaram para Maria Eduarda.
 
-**Profa. Antonia Jamille de Oliveira** (Orientadora — Supervisão Acadêmica)
-- Vinculação: Departamento de Estruturas, UFC Crateús
-- Responsabilidade: rigor técnico-científico, conexão com pesquisa em recursos hídricos, orientação acadêmica
+**Atenção ao usar documentos antigos:** até a Fase 2 os materiais listavam Vilmar como líder
+bolsista. No Anexo IV vigente o líder é a Francisca Mirele e o Vilmar é voluntário.
 
 ---
 
@@ -410,7 +417,7 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
 - **Teste:** Instalar 3 kits em propriedades com feijão-caupi em Crateús. Medir umidade do solo a cada 30 min durante 30 dias. Comparar o volume recomendado pelo modelo com a necessidade real estimada pelos parâmetros da Embrapa. Registrar produtividade ao final do ciclo.
 - **Métricas:** desvio (%) entre volume recomendado e real, % de leituras com desvio < 15%, variação de CE do solo, produtividade (kg/ha) vs linha de base
 - **Critério de sucesso:** Desvio < 15% em 70% das leituras e redução >= 25% no volume sem queda de produtividade em pelo menos 2 das 3 propriedades
-- **Responsável:** Ana Jamilly Almeida Teixeira | **Prazo:** Mai/Jul 2026, 30 dias
+- **Responsável:** Maria Eduarda Jesus de Mendonça | **Prazo:** Mai/Jul 2026, 30 dias
 
 **Cartão de Aprendizado:**
 - **Observação projetada:** Desvio médio de 22% na semana 1, reduzindo para 11% na semana 4 após ajuste com dados locais. As 3 propriedades apresentaram redução média de 38% no consumo de água, com produtividade estável e queda média de 12% na condutividade elétrica do solo.
@@ -424,7 +431,7 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
 - **Teste:** Contatar as 3 principais associações de irrigantes de Crateús e Quixadá. Propor parceria sem custo inicial. Realizar apresentação de 20 min para os membros e medir o interesse individual com questionário de 5 perguntas aplicado após a sessão.
 - **Métricas:** número de associações que aceitaram apresentar o produto, número de agricultores indicados por associação, % de membros com interesse declarado, tempo entre apresentação e primeiro contato de compra
 - **Critério de sucesso:** Pelo menos 2 das 3 associações aceitarem apresentar o AgroSense e indicarem no mínimo 5 agricultores com interesse real
-- **Responsável:** Eduarda | **Prazo:** Abr 2026, 5 dias
+- **Responsável:** Francisca Mirele Ferreira Batista | **Prazo:** Abr 2026, 5 dias
 
 **Cartão de Aprendizado:**
 - **Observação projetada:** 2 das 3 associações aceitaram apresentar o produto. A terceira solicitou resultado documentado de campo antes. Cada apresentação gerou em média 7 agricultores interessados. A decisão de compra foi sempre individual. O presidente da associação funcionou como referência de credibilidade, não como comprador líder.
@@ -574,8 +581,8 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
 
 ### Pendências administrativas
 
-- [ ] Confirmar sobrenome completo da Eduarda (para documentos oficiais)
-- [ ] Confirmar campo "Unidade" do Formulário Anexo I com a Profa. Antonia Jamille
+- [x] Sobrenome da Eduarda confirmado pelo Anexo IV: Maria Eduarda Jesus de Mendonça
+- [x] Campo "Unidade" confirmado pelo Anexo IV: Estruturas
 - [ ] Submissão do resumo nos EU2026 (texto está pronto, falta colar no formulário)
 - [ ] Submissão do MVP + Pitch via Google Forms do programa Bora Criar
 
@@ -869,6 +876,39 @@ Decisões importantes que não devem ser revertidas sem motivo explícito:
 - Anatel (2023) — 77% das áreas rurais do semiárido sem Wi-Fi ou 4G
 - AgFunder (2023) — crescimento de 30% ao ano do agritech BR (citar com reserva)
 - API INMET — https://apitempo.inmet.gov.br/ (gratuita, sem autenticação)
+
+---
+
+## 15. CONJUNTO DE NÚMEROS PADRÃO DOS DOCUMENTOS
+
+Base única usada nos entregáveis da Fase 3. Toda peça nova deve usar estes valores,
+para que nenhum documento contradiga outro. Substituir pelos dados reais depois do piloto.
+
+**Propriedade de referência**
+- Canteiro monitorado: 2.000 m² de feijão-caupi, irrigação por sulcos
+- Vazão do sulco: cerca de 60 m³/h
+- Recomendação do sistema: 25 minutos, 25 m³, lâmina líquida de 7,5 mm
+- Prática habitual: 40 minutos, 40 m³
+- Economia por irrigação: 15 m³. Redução de 37%
+- Economia no mês, 20 irrigações: 300 m³, o equivalente a 30 carros-pipa de 10 mil litros
+- Produtividade: 1.200 kg/ha na linha de base, 1.350 kg/ha com o sistema, ganho de 12%
+- Condutividade elétrica do solo: queda de 10% no ciclo
+
+**Mercado, regra única de receita recorrente de R$ 360 por propriedade ao ano**
+- Brasil, 3,8 milhões de agricultores familiares: R$ 1,37 bilhão por ano
+- Nordeste, 2,3 milhões: R$ 828 milhões por ano
+- Ceará, 320 mil: R$ 115 milhões por ano
+- Meta de 5% do Ceará, 16 mil: R$ 5,8 milhões por ano
+- Receita por cliente no ano 1: R$ 540, sendo R$ 180 de kit mais R$ 360 de assinatura
+- Custo de nuvem e mensagens: cerca de R$ 2,50 por assinante ao mês, margem de 92%
+- Ponto de equilíbrio: 200 assinantes, R$ 6 mil por mês
+
+**Dado de plataforma**
+- 15 propriedades a uma leitura a cada 30 minutos somam cerca de 260 mil leituras por ano
+
+Os números da versão anterior do arquivo (420 litros por irrigação, 62.400 litros no mês,
+22% de produtividade e o funil de mercado com R$ 83 milhões no Nordeste) eram incoerentes
+entre si e foram substituídos por este conjunto.
 
 ---
 

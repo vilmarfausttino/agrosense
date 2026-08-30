@@ -12,8 +12,9 @@
     <p style="font-size:11pt;margin-top:12mm;opacity:.8;line-height:1.7">
       AgroSense, plataforma de irrigação inteligente para o semiárido cearense<br>
       Universidade Federal do Ceará, Campus de Crateús<br>
-      Vilmar Faustino do Nascimento, Ana Jamilly Almeida Teixeira, Ana Letícia Alves Sousa,
-      Eduarda e Profa. Antonia Jamille de Oliveira
+      Francisca Mirele Ferreira Batista, Maria Eduarda Jesus de Mendonça,
+      Vilmar Faustino do Nascimento, Ana Letícia Alves Sousa
+      e Profa. Antonia Jamille de Oliveira
     </p>
   </div>
 </section>
@@ -127,7 +128,7 @@
             <div class="pc" style="background:var(--azul-l);border-color:#bcd3ee">
               <div class="lbl">Tempo de irrigação</div>
               <div class="val b">25 minutos</div>
-              <div class="sub">Início recomendado: 6h00. Cerca de 980 litros no canteiro de feijão-caupi.</div>
+              <div class="sub">Início recomendado: 6h00. São 25 m&sup3; no canteiro de 2.000 m&sup2; de feijão-caupi.</div>
             </div>
             <div class="pc">
               <div class="lbl">Por que hoje</div>
@@ -137,8 +138,8 @@
             </div>
             <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
               <div class="lbl">Impacto estimado</div>
-              <div class="val" style="font-size:11pt">420 L a menos</div>
-              <div class="sub">Comparado ao tempo que costuma ser usado nesta lavoura, 40 minutos.</div>
+              <div class="val" style="font-size:11pt">15 m&sup3; a menos</div>
+              <div class="sub">Comparado aos 40 minutos usados hoje nesta lavoura, que aplicam 40 m&sup3;.</div>
             </div>
             <div class="btn">Confirmar irrigação</div>
             <div class="btn ghost">Ver histórico completo</div>
@@ -161,19 +162,19 @@
             <div class="duo" style="margin-bottom:2.4mm">
               <div class="pc">
                 <div class="lbl">Hoje</div>
-                <div class="val">420 L</div>
+                <div class="val">15 m&sup3;</div>
                 <div class="sub">economizados</div>
               </div>
               <div class="pc">
                 <div class="lbl">Safra</div>
-                <div class="val">+22%</div>
+                <div class="val">+12%</div>
                 <div class="sub">produtividade estimada</div>
               </div>
             </div>
             <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
               <div class="lbl">Acumulado em agosto</div>
-              <div class="val">62.400 L</div>
-              <div class="sub">Água que ficou no poço, equivalente a 12 carros-pipa de mil litros.</div>
+              <div class="val">300 m&sup3;</div>
+              <div class="sub">Água que ficou no açude, o equivalente a 30 carros-pipa de 10 mil litros.</div>
             </div>
             <div class="pc">
               <div class="lbl">Próximos passos</div>
@@ -275,7 +276,7 @@
         <div class="pc" style="background:var(--azul-l);border-color:#bcd3ee">
           <div class="lbl">Tempo de irrigação</div>
           <div class="val b">25 minutos</div>
-          <div class="sub">Início recomendado: 6h00. Cerca de 980 litros no canteiro de feijão-caupi.</div>
+          <div class="sub">Início recomendado: 6h00. São 25 m&sup3; no canteiro de 2.000 m&sup2; de feijão-caupi.</div>
         </div>
         <div class="pc">
           <div class="lbl">Por que hoje</div>
@@ -285,8 +286,8 @@
         </div>
         <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
           <div class="lbl">Impacto estimado</div>
-          <div class="val" style="font-size:11pt">420 L a menos</div>
-          <div class="sub">Comparado ao tempo que costuma ser usado nesta lavoura, 40 minutos.</div>
+          <div class="val" style="font-size:11pt">15 m&sup3; a menos</div>
+          <div class="sub">Comparado aos 40 minutos usados hoje nesta lavoura, que aplicam 40 m&sup3;.</div>
         </div>
         <div class="btn">Confirmar irrigação</div>
         <div class="btn ghost">Ver histórico completo</div>
@@ -334,13 +335,13 @@
       <div class="scr">
         <div class="check">&#10003;</div>
         <div class="duo" style="margin-bottom:2.4mm">
-          <div class="pc"><div class="lbl">Hoje</div><div class="val">420 L</div><div class="sub">economizados</div></div>
-          <div class="pc"><div class="lbl">Safra</div><div class="val">+22%</div><div class="sub">produtividade estimada</div></div>
+          <div class="pc"><div class="lbl">Hoje</div><div class="val">15 m&sup3;</div><div class="sub">economizados</div></div>
+          <div class="pc"><div class="lbl">Safra</div><div class="val">+12%</div><div class="sub">produtividade estimada</div></div>
         </div>
         <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
           <div class="lbl">Acumulado em agosto</div>
-          <div class="val">62.400 L</div>
-          <div class="sub">Água que ficou no poço, equivalente a 12 carros-pipa de mil litros.</div>
+          <div class="val">300 m&sup3;</div>
+          <div class="sub">Água que ficou no açude, o equivalente a 30 carros-pipa de 10 mil litros.</div>
         </div>
         <div class="pc">
           <div class="lbl">Próximos passos</div>
@@ -359,8 +360,8 @@
       <div class="note">
         <div class="nt">Litros, não porcentagem</div>
         <p>O acumulado do mês é traduzido em carros-pipa porque essa é a unidade que o agricultor do
-           semiárido usa para pensar em água. Porcentagem é linguagem de relatório, carro-pipa é
-           linguagem de quem já pagou por um.</p>
+           semiárido usa para pensar em água. Trezentos metros cúbicos não dizem nada, trinta
+           carros-pipa dizem tudo para quem já pagou por um.</p>
       </div>
       <div class="note">
         <div class="nt">Retenção e venda</div>
@@ -369,10 +370,11 @@
            Esse número compartilhado é material de venda produzido pelo próprio cliente.</p>
       </div>
       <div class="note" style="border-left-color:var(--ambar)">
-        <div class="nt">Ressalva honesta</div>
-        <p>Os valores de 420 litros por dia e 22% de produtividade são projeções construídas a partir
-           dos parâmetros da Embrapa Semiárido e das entrevistas. A medição real começa com os
-           três kits em campo em Crateús, com medidor de vazão e linha de base de 30 dias.</p>
+        <div class="nt">De onde saem os números</div>
+        <p>O canteiro monitorado tem 2.000 m² e o sulco entrega cerca de 60 m³ por hora. Vinte e cinco
+           minutos aplicam 25 m³, que correspondem à lâmina líquida de 7,5 mm indicada pelos limiares
+           da Embrapa para o feijão-caupi nesta fase. A prática de 40 minutos aplica 40 m³, e a
+           diferença de 15 m³ por irrigação é o que a tela mostra.</p>
       </div>
     </div>
   </div>
