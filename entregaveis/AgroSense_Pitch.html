@@ -21,7 +21,7 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--cz);bac
 .slide:last-child{page-break-after:auto;break-after:auto;margin-bottom:0}
 .head{height:15mm;background:var(--verde);color:#fff;display:flex;align-items:center;
   justify-content:space-between;padding:0 12mm}
-.head h2{font-size:15pt;font-weight:700}
+.head h2{font-size:15pt;font-weight:700;display:flex;align-items:center;gap:3.6mm}
 .head .tag{font-size:9pt;opacity:.8;font-weight:400}
 .body{padding:8mm 12mm;height:152mm;display:flex;flex-direction:column;justify-content:center}
 .num{position:absolute;right:9mm;bottom:5mm;font-size:8pt;color:#9ca3af}
@@ -48,7 +48,7 @@ li{margin-bottom:1.5mm}
   align-items:center;justify-content:space-between;padding:0 3mm}
 .phead{padding:3mm 3.5mm;color:#fff}
 .phead.g{background:var(--verde)} .phead.b{background:var(--azul)}
-.phead .t{font-size:8.5pt;font-weight:700}
+.phead .t{font-size:8.5pt;font-weight:700;display:flex;align-items:center;gap:1.7mm}
 .phead .s{font-size:6pt;opacity:.85;margin-top:.6mm}
 .scr{flex:1;padding:3mm;background:#F5F7F6;overflow:hidden}
 .pc{background:#fff;border:.3mm solid #e5e7eb;border-radius:2mm;padding:2.6mm;margin-bottom:2.4mm}
@@ -87,6 +87,16 @@ li{margin-bottom:1.5mm}
   border-bottom:1px solid #e5e7eb}
 .note .nt{font-size:9.5pt;font-weight:700;color:var(--cz);margin-bottom:1mm}
 .note p{font-size:9pt;color:var(--cm);line-height:1.45}
+/* marca AgroSense */
+.mk{fill:currentColor;flex:none}
+.head h2 .mk{width:7.6mm;height:7.6mm}
+.lock{display:flex;align-items:center;gap:6mm}
+.lock .mk{width:22mm;height:22mm}
+.lock h1{font-size:40pt;font-weight:700;line-height:1.05}
+.lockmin{display:flex;align-items:center;gap:3.4mm;margin-bottom:9mm}
+.lockmin .mk{width:11mm;height:11mm}
+.lockmin span{font-size:17pt;font-weight:700;letter-spacing:-.2px}
+.phead .mk{width:4.4mm;height:4.4mm}
 /* elementos do pitch */
 .stat{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:5mm;text-align:center}
 .stat .v{font-size:22pt;font-weight:700;color:var(--verde);line-height:1.05}
@@ -123,6 +133,11 @@ tr:last-child td{border-bottom:none}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="as-mark" viewBox="0 0 32 32">
+    <path fill-rule="evenodd" d="M16 2.6 C16 2.6 25.2 13.2 25.6 19.4 C26 25.2 21.5 29.4 16 29.4 C10.5 29.4 6 25.2 6.4 19.4 C6.8 13.2 16 2.6 16 2.6 Z M9.5 25.2 C9.1 18.9 15.2 14.7 22.9 16.3 C23.3 22.6 17.2 26.8 9.5 25.2 Z"/>
+  </symbol>
+</svg>
 <!-- 1. CAPA -->
 <section class="slide" style="background:var(--verde);color:#fff;padding:0">
   <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 22mm">
@@ -130,7 +145,7 @@ tr:last-child td{border-bottom:none}
       Jornada Bora Criar, Hub Corredores Digitais, Fase 3
     </div>
     <div style="width:26mm;height:1.2mm;background:var(--verde-m);margin:6mm 0"></div>
-    <h1 style="font-size:40pt;font-weight:700;line-height:1.05">AgroSense</h1>
+    <div class="lock"><svg class="mk"><use href="#as-mark"></use></svg><h1>AgroSense</h1></div>
     <p style="font-size:16pt;margin-top:4mm;opacity:.92">
       Irrigação inteligente para o agricultor familiar do semiárido cearense
     </p>
@@ -146,7 +161,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 2. PROBLEMA -->
 <section class="slide">
-  <div class="head"><h2>O problema</h2><span class="tag">02</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>O problema</h2><span class="tag">02</span></div>
   <div class="body">
     <p style="font-size:13pt;line-height:1.5;margin-bottom:6mm">
       No semiárido, que ocupa 75% do território do Ceará, o agricultor familiar decide quanto irrigar
@@ -178,7 +193,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 3. PUBLICO ALVO -->
 <section class="slide">
-  <div class="head"><h2>Público-alvo</h2><span class="tag">03</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Público-alvo</h2><span class="tag">03</span></div>
   <div class="body">
     <div class="grid2">
       <div>
@@ -226,7 +241,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 4. MERCADO -->
 <section class="slide">
-  <div class="head"><h2>Tamanho e projeção de mercado</h2><span class="tag">04</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tamanho e projeção de mercado</h2><span class="tag">04</span></div>
   <div class="body">
     <div style="display:flex;gap:12mm">
       <div style="flex:1.1">
@@ -267,7 +282,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 5. PROPOSTA DE VALOR -->
 <section class="slide">
-  <div class="head"><h2>Proposta de valor</h2><span class="tag">05</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Proposta de valor</h2><span class="tag">05</span></div>
   <div class="body">
     <div style="background:var(--verde);color:#fff;border-radius:6px;padding:6mm 7mm;margin-bottom:6mm">
       <p style="font-size:15pt;font-weight:700;line-height:1.35">
@@ -309,7 +324,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 6. FLUXO DO NEGOCIO -->
 <section class="slide">
-  <div class="head"><h2>Fluxo do negócio</h2><span class="tag">06</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Fluxo do negócio</h2><span class="tag">06</span></div>
   <div class="body">
     <div class="grid3">
       <div class="card" style="border-top:3mm solid var(--verde)">
@@ -347,7 +362,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 7. COMO FUNCIONA -->
 <section class="slide">
-  <div class="head"><h2>Como funciona</h2><span class="tag">07</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Como funciona</h2><span class="tag">07</span></div>
   <div class="body">
     <div class="pipe">
       <div class="pstep"><div class="n">01</div><div class="t">Solo</div>
@@ -388,7 +403,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 8. COMO IMPLEMENTAR -->
 <section class="slide">
-  <div class="head"><h2>Como implementar</h2><span class="tag">08, viabilidade</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Como implementar</h2><span class="tag">08, viabilidade</span></div>
   <div class="body">
     <div class="tl">
       <div class="tlc"><div class="d">Fase 1, até julho de 2026</div><div class="t">Montagem</div>
@@ -418,13 +433,13 @@ tr:last-child td{border-bottom:none}
 
 <!-- 9. MVP -->
 <section class="slide">
-  <div class="head"><h2>MVP e desenvolvimento tecnológico</h2><span class="tag">09</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>MVP e desenvolvimento tecnológico</h2><span class="tag">09</span></div>
   <div class="body">
     <div style="display:flex;gap:10mm">
       <div style="flex:0 0 auto">
         <div class="phone" style="width:56mm;height:112mm">
           <div class="status"><span>5:32</span><span>4G &nbsp; 82%</span></div>
-          <div class="phead g"><div class="t">AgroSense</div>
+          <div class="phead g"><div class="t"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
             <div class="s">Sítio Boa Esperança, Crateús</div></div>
           <div class="scr">
             <div class="pc">
@@ -479,7 +494,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 10. DIFERENCIAL -->
 <section class="slide">
-  <div class="head"><h2>Diferencial competitivo</h2><span class="tag">10</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Diferencial competitivo</h2><span class="tag">10</span></div>
   <div class="body">
     <table>
       <tr><th style="width:22%">Dimensão</th><th style="width:26%">Agrosmart</th>
@@ -516,7 +531,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 11. BENEFICIOS -->
 <section class="slide">
-  <div class="head"><h2>Benefícios para o cliente</h2><span class="tag">11</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Benefícios para o cliente</h2><span class="tag">11</span></div>
   <div class="body">
     <div class="grid4">
       <div class="stat"><div class="v">37%</div>
@@ -559,7 +574,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 12. PROXIMOS PASSOS -->
 <section class="slide">
-  <div class="head"><h2>Próximos passos</h2><span class="tag">12</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Próximos passos</h2><span class="tag">12</span></div>
   <div class="body">
     <div class="grid3">
       <div class="card" style="border-top:3mm solid var(--verde-m)">
@@ -602,7 +617,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- 13. EQUIPE -->
 <section class="slide">
-  <div class="head"><h2>Equipe multidisciplinar</h2><span class="tag">13</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Equipe multidisciplinar</h2><span class="tag">13</span></div>
   <div class="body">
     <div class="grid3" style="margin-bottom:5mm">
       <div class="member">
@@ -649,6 +664,7 @@ tr:last-child td{border-bottom:none}
 <!-- 14. AGRADECIMENTO -->
 <section class="slide" style="background:var(--verde);color:#fff;padding:0">
   <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 22mm">
+    <svg class="mk" style="width:19mm;height:19mm;margin-bottom:7mm"><use href="#as-mark"></use></svg>
     <p style="font-size:26pt;font-weight:700;line-height:1.25">
       Mais produtividade.<br>Menos desperdício.<br>Mais renda.
     </p>

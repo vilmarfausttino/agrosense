@@ -6,7 +6,7 @@
   align-items:center;justify-content:space-between;padding:0 3mm}
 .phead{padding:3mm 3.5mm;color:#fff}
 .phead.g{background:var(--verde)} .phead.b{background:var(--azul)}
-.phead .t{font-size:8.5pt;font-weight:700}
+.phead .t{font-size:8.5pt;font-weight:700;display:flex;align-items:center;gap:1.7mm}
 .phead .s{font-size:6pt;opacity:.85;margin-top:.6mm}
 .scr{flex:1;padding:3mm;background:#F5F7F6;overflow:hidden}
 .pc{background:#fff;border:.3mm solid #e5e7eb;border-radius:2mm;padding:2.6mm;margin-bottom:2.4mm}

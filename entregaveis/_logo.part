@@ -1,0 +1,10 @@
+/* marca AgroSense */
+.mk{fill:currentColor;flex:none}
+.head h2 .mk{width:7.6mm;height:7.6mm}
+.lock{display:flex;align-items:center;gap:6mm}
+.lock .mk{width:22mm;height:22mm}
+.lock h1{font-size:40pt;font-weight:700;line-height:1.05}
+.lockmin{display:flex;align-items:center;gap:3.4mm;margin-bottom:9mm}
+.lockmin .mk{width:11mm;height:11mm}
+.lockmin span{font-size:17pt;font-weight:700;letter-spacing:-.2px}
+.phead .mk{width:4.4mm;height:4.4mm}

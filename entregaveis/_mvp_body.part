@@ -1,6 +1,7 @@
 <!-- 1. CAPA -->
 <section class="slide" style="background:var(--verde);color:#fff;padding:0">
   <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 22mm">
+    <div class="lockmin"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
     <div style="font-size:9pt;letter-spacing:2.5px;text-transform:uppercase;opacity:.75">
       Jornada Bora Criar, Hub Corredores Digitais, Fase 3
     </div>
@@ -12,16 +13,16 @@
     <p style="font-size:11pt;margin-top:12mm;opacity:.8;line-height:1.7">
       AgroSense, plataforma de irrigação inteligente para o semiárido cearense<br>
       Universidade Federal do Ceará, Campus de Crateús<br>
-      Francisca Mirele Ferreira Batista, Maria Eduarda Jesus de Mendonça,
-      Vilmar Faustino do Nascimento, Ana Letícia Alves Sousa
-      e Profa. Antonia Jamille de Oliveira
+      Francisca Mirele Ferreira Batista, Maria Eduarda Jesus de Mendonça<br>
+      Vilmar Faustino do Nascimento, Ana Letícia Alves Sousa<br>
+      Profa. Antonia Jamille de Oliveira, orientadora
     </p>
   </div>
 </section>
 
 <!-- 2. JORNADA CRITICA -->
 <section class="slide">
-  <div class="head"><h2>Jornada crítica do usuário</h2><span class="tag">Entrada, ação, resultado</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Jornada crítica do usuário</h2><span class="tag">Entrada, ação, resultado</span></div>
   <div class="body">
     <div class="note">
       <div class="nt">Tarefa número 1 do agricultor</div>
@@ -65,7 +66,7 @@
 
 <!-- 3. FLUXO DAS 3 TELAS -->
 <section class="slide">
-  <div class="head"><h2>Fluxo das 3 telas</h2><span class="tag">Entregável da atividade</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Fluxo das 3 telas</h2><span class="tag">Entregável da atividade</span></div>
   <div class="body" style="padding-top:6mm">
     <div class="flowrow">
 
@@ -74,7 +75,7 @@
         <div class="phone">
           <div class="status"><span>5:32</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
           <div class="phead g">
-            <div class="t">AgroSense</div>
+            <div class="t"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
             <div class="s">Sítio Boa Esperança, Crateús, CE</div>
           </div>
           <div class="scr">
@@ -193,12 +194,12 @@
 
 <!-- 4. TELA 1 DETALHE -->
 <section class="slide">
-  <div class="head"><h2>Tela 1, Entrada</h2><span class="tag">Onde o agricultor entende o próximo passo</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tela 1, Entrada</h2><span class="tag">Onde o agricultor entende o próximo passo</span></div>
   <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
     <div class="phone lg">
       <div class="status"><span>5:32</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
       <div class="phead g">
-        <div class="t">AgroSense</div>
+        <div class="t"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
         <div class="s">Sítio Boa Esperança, Crateús, CE</div>
       </div>
       <div class="scr">
@@ -264,7 +265,7 @@
 
 <!-- 5. TELA 2 DETALHE -->
 <section class="slide">
-  <div class="head"><h2>Tela 2, Interação</h2><span class="tag">Onde a solução acontece</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tela 2, Interação</h2><span class="tag">Onde a solução acontece</span></div>
   <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
     <div class="phone lg">
       <div class="status"><span>5:33</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
@@ -324,7 +325,7 @@
 
 <!-- 6. TELA 3 DETALHE -->
 <section class="slide">
-  <div class="head"><h2>Tela 3, Sucesso</h2><span class="tag">Confirmação de que o valor foi entregue</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tela 3, Sucesso</h2><span class="tag">Confirmação de que o valor foi entregue</span></div>
   <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
     <div class="phone lg">
       <div class="status"><span>6:02</span><span>vivo &nbsp; 4G &nbsp; 81%</span></div>
@@ -383,7 +384,7 @@
 
 <!-- 7. FECHAMENTO -->
 <section class="slide">
-  <div class="head"><h2>O que este MVP valida</h2><span class="tag">Próximo passo depois das telas</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>O que este MVP valida</h2><span class="tag">Próximo passo depois das telas</span></div>
   <div class="body">
     <div class="grid2">
       <div>

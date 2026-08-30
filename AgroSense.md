@@ -773,6 +773,22 @@ message = client.messages.create(
 \definecolor{CVermL}{HTML}{FEF2F2}   % vermelho claro
 ```
 
+### Marca
+
+Arquivos em `marca/`, criados em agosto de 2026. A marca é uma gota de água com uma folha
+recortada em negativo, de traço único, sem gradiente nem sombra.
+
+- Símbolo: `agrosense_marca.svg` e a versão branca para fundo escuro
+- Assinatura horizontal: `agrosense_logo.svg`, versão branca e versão em bloco verde
+- PNG de 1024 px de largura com fundo transparente para cada arquivo
+- Cores: verde principal `#085041`, verde médio `#1D9E75`
+- Área livre mínima em volta: a largura da própria gota
+- Tamanho mínimo: 16 px na tela, 6 mm impresso
+
+Nos entregáveis HTML a marca entra como `<symbol id="as-mark">` no arquivo `_defs.part`,
+com `fill: currentColor`, o que faz o símbolo herdar a cor do contexto: branco no
+cabeçalho verde e verde escuro sobre fundo claro, sem precisar de duas versões.
+
 ### PowerPoint com pptxgenjs (quando necessário)
 
 ```javascript

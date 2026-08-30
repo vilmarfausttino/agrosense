@@ -13,8 +13,9 @@ Os `.pdf` de mesmo nome são gerados a partir dos HTML.
 ./build.sh
 ```
 
-O script monta os HTML a partir das partes (`_style.part`, `_phone.part`, `_pitch.part`
-e os `_*_body.part`) e imprime os PDF com o Chromium headless. Para usar outro navegador:
+O script monta os HTML a partir das partes (`_style.part`, `_phone.part`, `_logo.part`,
+`_defs.part`, `_pitch.part` e os `_*_body.part`) e imprime os PDF com o Chromium headless.
+A marca fica em `_defs.part` como símbolo SVG e os arquivos soltos do logo estão em `../marca`. Para usar outro navegador:
 
 ```sh
 CHROME=/caminho/para/chrome ./build.sh

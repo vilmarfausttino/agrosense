@@ -21,7 +21,7 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--cz);bac
 .slide:last-child{page-break-after:auto;break-after:auto;margin-bottom:0}
 .head{height:15mm;background:var(--verde);color:#fff;display:flex;align-items:center;
   justify-content:space-between;padding:0 12mm}
-.head h2{font-size:15pt;font-weight:700}
+.head h2{font-size:15pt;font-weight:700;display:flex;align-items:center;gap:3.6mm}
 .head .tag{font-size:9pt;opacity:.8;font-weight:400}
 .body{padding:8mm 12mm;height:152mm;display:flex;flex-direction:column;justify-content:center}
 .num{position:absolute;right:9mm;bottom:5mm;font-size:8pt;color:#9ca3af}
@@ -48,7 +48,7 @@ li{margin-bottom:1.5mm}
   align-items:center;justify-content:space-between;padding:0 3mm}
 .phead{padding:3mm 3.5mm;color:#fff}
 .phead.g{background:var(--verde)} .phead.b{background:var(--azul)}
-.phead .t{font-size:8.5pt;font-weight:700}
+.phead .t{font-size:8.5pt;font-weight:700;display:flex;align-items:center;gap:1.7mm}
 .phead .s{font-size:6pt;opacity:.85;margin-top:.6mm}
 .scr{flex:1;padding:3mm;background:#F5F7F6;overflow:hidden}
 .pc{background:#fff;border:.3mm solid #e5e7eb;border-radius:2mm;padding:2.6mm;margin-bottom:2.4mm}
@@ -87,12 +87,28 @@ li{margin-bottom:1.5mm}
   border-bottom:1px solid #e5e7eb}
 .note .nt{font-size:9.5pt;font-weight:700;color:var(--cz);margin-bottom:1mm}
 .note p{font-size:9pt;color:var(--cm);line-height:1.45}
+/* marca AgroSense */
+.mk{fill:currentColor;flex:none}
+.head h2 .mk{width:7.6mm;height:7.6mm}
+.lock{display:flex;align-items:center;gap:6mm}
+.lock .mk{width:22mm;height:22mm}
+.lock h1{font-size:40pt;font-weight:700;line-height:1.05}
+.lockmin{display:flex;align-items:center;gap:3.4mm;margin-bottom:9mm}
+.lockmin .mk{width:11mm;height:11mm}
+.lockmin span{font-size:17pt;font-weight:700;letter-spacing:-.2px}
+.phead .mk{width:4.4mm;height:4.4mm}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="as-mark" viewBox="0 0 32 32">
+    <path fill-rule="evenodd" d="M16 2.6 C16 2.6 25.2 13.2 25.6 19.4 C26 25.2 21.5 29.4 16 29.4 C10.5 29.4 6 25.2 6.4 19.4 C6.8 13.2 16 2.6 16 2.6 Z M9.5 25.2 C9.1 18.9 15.2 14.7 22.9 16.3 C23.3 22.6 17.2 26.8 9.5 25.2 Z"/>
+  </symbol>
+</svg>
 <!-- 1. CAPA -->
 <section class="slide" style="background:var(--verde);color:#fff;padding:0">
   <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 22mm">
+    <div class="lockmin"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
     <div style="font-size:9pt;letter-spacing:2.5px;text-transform:uppercase;opacity:.75">
       Jornada Bora Criar, Hub Corredores Digitais, Fase 3
     </div>
@@ -104,16 +120,16 @@ li{margin-bottom:1.5mm}
     <p style="font-size:11pt;margin-top:12mm;opacity:.8;line-height:1.7">
       AgroSense, plataforma de irrigação inteligente para o semiárido cearense<br>
       Universidade Federal do Ceará, Campus de Crateús<br>
-      Francisca Mirele Ferreira Batista, Maria Eduarda Jesus de Mendonça,
-      Vilmar Faustino do Nascimento, Ana Letícia Alves Sousa
-      e Profa. Antonia Jamille de Oliveira
+      Francisca Mirele Ferreira Batista, Maria Eduarda Jesus de Mendonça<br>
+      Vilmar Faustino do Nascimento, Ana Letícia Alves Sousa<br>
+      Profa. Antonia Jamille de Oliveira, orientadora
     </p>
   </div>
 </section>
 
 <!-- 2. JORNADA CRITICA -->
 <section class="slide">
-  <div class="head"><h2>Jornada crítica do usuário</h2><span class="tag">Entrada, ação, resultado</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Jornada crítica do usuário</h2><span class="tag">Entrada, ação, resultado</span></div>
   <div class="body">
     <div class="note">
       <div class="nt">Tarefa número 1 do agricultor</div>
@@ -157,7 +173,7 @@ li{margin-bottom:1.5mm}
 
 <!-- 3. FLUXO DAS 3 TELAS -->
 <section class="slide">
-  <div class="head"><h2>Fluxo das 3 telas</h2><span class="tag">Entregável da atividade</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Fluxo das 3 telas</h2><span class="tag">Entregável da atividade</span></div>
   <div class="body" style="padding-top:6mm">
     <div class="flowrow">
 
@@ -166,7 +182,7 @@ li{margin-bottom:1.5mm}
         <div class="phone">
           <div class="status"><span>5:32</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
           <div class="phead g">
-            <div class="t">AgroSense</div>
+            <div class="t"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
             <div class="s">Sítio Boa Esperança, Crateús, CE</div>
           </div>
           <div class="scr">
@@ -285,12 +301,12 @@ li{margin-bottom:1.5mm}
 
 <!-- 4. TELA 1 DETALHE -->
 <section class="slide">
-  <div class="head"><h2>Tela 1, Entrada</h2><span class="tag">Onde o agricultor entende o próximo passo</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tela 1, Entrada</h2><span class="tag">Onde o agricultor entende o próximo passo</span></div>
   <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
     <div class="phone lg">
       <div class="status"><span>5:32</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
       <div class="phead g">
-        <div class="t">AgroSense</div>
+        <div class="t"><svg class="mk"><use href="#as-mark"></use></svg><span>AgroSense</span></div>
         <div class="s">Sítio Boa Esperança, Crateús, CE</div>
       </div>
       <div class="scr">
@@ -356,7 +372,7 @@ li{margin-bottom:1.5mm}
 
 <!-- 5. TELA 2 DETALHE -->
 <section class="slide">
-  <div class="head"><h2>Tela 2, Interação</h2><span class="tag">Onde a solução acontece</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tela 2, Interação</h2><span class="tag">Onde a solução acontece</span></div>
   <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
     <div class="phone lg">
       <div class="status"><span>5:33</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
@@ -416,7 +432,7 @@ li{margin-bottom:1.5mm}
 
 <!-- 6. TELA 3 DETALHE -->
 <section class="slide">
-  <div class="head"><h2>Tela 3, Sucesso</h2><span class="tag">Confirmação de que o valor foi entregue</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>Tela 3, Sucesso</h2><span class="tag">Confirmação de que o valor foi entregue</span></div>
   <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
     <div class="phone lg">
       <div class="status"><span>6:02</span><span>vivo &nbsp; 4G &nbsp; 81%</span></div>
@@ -475,7 +491,7 @@ li{margin-bottom:1.5mm}
 
 <!-- 7. FECHAMENTO -->
 <section class="slide">
-  <div class="head"><h2>O que este MVP valida</h2><span class="tag">Próximo passo depois das telas</span></div>
+  <div class="head"><h2><svg class="mk"><use href="#as-mark"></use></svg>O que este MVP valida</h2><span class="tag">Próximo passo depois das telas</span></div>
   <div class="body">
     <div class="grid2">
       <div>

@@ -14,7 +14,7 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--cz);bac
 .slide:last-child{page-break-after:auto;break-after:auto;margin-bottom:0}
 .head{height:15mm;background:var(--verde);color:#fff;display:flex;align-items:center;
   justify-content:space-between;padding:0 12mm}
-.head h2{font-size:15pt;font-weight:700}
+.head h2{font-size:15pt;font-weight:700;display:flex;align-items:center;gap:3.6mm}
 .head .tag{font-size:9pt;opacity:.8;font-weight:400}
 .body{padding:8mm 12mm;height:152mm;display:flex;flex-direction:column;justify-content:center}
 .num{position:absolute;right:9mm;bottom:5mm;font-size:8pt;color:#9ca3af}
