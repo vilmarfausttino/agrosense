@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AgroSense, Construção do MVP</title>
+<style>
+:root{
+  --verde:#085041; --verde-m:#1D9E75; --verde-l:#D6F0E7;
+  --roxo:#7B2D8B; --roxo-l:#F4E8F9;
+  --azul:#185FA5; --azul-l:#DCE9F7;
+  --ambar:#BA7517; --ambar-l:#FEF3C7;
+  --cz:#1F2937; --cm:#5F5E5A; --cc:#F1EFE8; --bg:#F8F7F5;
+  --verm:#DC2626; --verm-l:#FEF2F2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--cz);background:#6b7280}
+.slide{position:relative;width:297mm;height:167mm;overflow:hidden;background:var(--bg);
+  page-break-after:always;break-after:page;margin:0 auto 8mm;box-shadow:0 4px 24px rgba(0,0,0,.35)}
+.slide:last-child{page-break-after:auto;break-after:auto;margin-bottom:0}
+.head{height:15mm;background:var(--verde);color:#fff;display:flex;align-items:center;
+  justify-content:space-between;padding:0 12mm}
+.head h2{font-size:15pt;font-weight:700}
+.head .tag{font-size:9pt;opacity:.8;font-weight:400}
+.body{padding:8mm 12mm;height:152mm;display:flex;flex-direction:column;justify-content:center}
+.num{position:absolute;right:9mm;bottom:5mm;font-size:8pt;color:#9ca3af}
+h3{font-size:12pt;color:var(--verde);margin-bottom:3mm}
+p,li{font-size:10.5pt;line-height:1.5}
+.sm{font-size:9.5pt}
+.muted{color:var(--cm)}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:5mm}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
+.kicker{font-size:8.5pt;text-transform:uppercase;letter-spacing:1.2px;color:var(--verde-m);
+  font-weight:700;margin-bottom:2mm}
+.big{font-size:26pt;font-weight:700;color:var(--verde);line-height:1.05}
+ul{margin-left:5mm}
+li{margin-bottom:1.5mm}
+@page{size:297mm 167mm;margin:0}
+@media print{body{background:#fff}.slide{margin:0;box-shadow:none}}
+/* mockups de celular */
+.phone{width:66mm;height:126mm;border:2.2mm solid #111827;border-radius:7mm;background:#fff;
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.phone.lg{width:74mm;height:134mm}
+.status{height:4.5mm;background:#111827;color:#fff;font-size:5.5pt;display:flex;
+  align-items:center;justify-content:space-between;padding:0 3mm}
+.phead{padding:3mm 3.5mm;color:#fff}
+.phead.g{background:var(--verde)} .phead.b{background:var(--azul)}
+.phead .t{font-size:8.5pt;font-weight:700}
+.phead .s{font-size:6pt;opacity:.85;margin-top:.6mm}
+.scr{flex:1;padding:3mm;background:#F5F7F6;overflow:hidden}
+.pc{background:#fff;border:.3mm solid #e5e7eb;border-radius:2mm;padding:2.6mm;margin-bottom:2.4mm}
+.pc .lbl{font-size:5.8pt;text-transform:uppercase;letter-spacing:.6px;color:#8a8a86;font-weight:700}
+.pc .val{font-size:14pt;font-weight:700;color:var(--verde);line-height:1.1}
+.pc .val.b{color:var(--azul)}
+.pc .sub{font-size:6.3pt;color:#5F5E5A;line-height:1.35;margin-top:1mm}
+.pill{display:inline-block;font-size:5.6pt;font-weight:700;padding:.8mm 1.8mm;border-radius:3mm}
+.pill.warn{background:var(--verm-l);color:var(--verm)}
+.pill.ok{background:var(--verde-l);color:var(--verde)}
+.row{display:flex;justify-content:space-between;align-items:flex-end}
+.btn{display:block;text-align:center;font-size:7.5pt;font-weight:700;color:#fff;
+  background:var(--verde-m);border-radius:2mm;padding:2.6mm 0;margin-top:1mm}
+.btn.b{background:var(--azul)}
+.btn.ghost{background:#fff;color:var(--cm);border:.3mm solid #d6d5d0}
+.fc{display:flex;justify-content:space-between;text-align:center;margin-top:1.4mm}
+.fc div{flex:1}
+.fc .d{font-size:5.6pt;color:#8a8a86}
+.fc .i{font-size:9pt;line-height:1.2}
+.fc .m{font-size:5.8pt;font-weight:700;color:var(--cz)}
+.hist{font-size:6pt;color:#5F5E5A;display:flex;justify-content:space-between;
+  padding:1.1mm 0;border-bottom:.2mm dashed #e5e7eb}
+.hist:last-child{border-bottom:none}
+.check{width:14mm;height:14mm;border-radius:50%;background:var(--verde-m);color:#fff;
+  font-size:16pt;font-weight:700;display:flex;align-items:center;justify-content:center;
+  margin:2mm auto 3mm}
+.duo{display:flex;gap:2.4mm}
+.duo .pc{flex:1;margin-bottom:0;text-align:center}
+.duo .val{font-size:11pt}
+.flowrow{display:flex;align-items:center;justify-content:center;gap:6mm}
+.arrow{font-size:20pt;color:var(--verde-m);font-weight:700}
+.caplbl{text-align:center;font-size:8.5pt;font-weight:700;color:var(--verde);margin-bottom:2mm}
+.caplbl span{display:block;font-size:7pt;font-weight:400;color:var(--cm);margin-top:.6mm}
+.note{border-left:2.5mm solid var(--verde-m);background:#fff;padding:3mm 4mm;margin-bottom:3mm;
+  border-radius:0 3px 3px 0;border-top:1px solid #e5e7eb;border-right:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb}
+.note .nt{font-size:9.5pt;font-weight:700;color:var(--cz);margin-bottom:1mm}
+.note p{font-size:9pt;color:var(--cm);line-height:1.45}
+</style>
+</head>
+<body>
+<!-- 1. CAPA -->
+<section class="slide" style="background:var(--verde);color:#fff;padding:0">
+  <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 22mm">
+    <div style="font-size:9pt;letter-spacing:2.5px;text-transform:uppercase;opacity:.75">
+      Jornada Bora Criar, Hub Corredores Digitais, Fase 3
+    </div>
+    <div style="width:26mm;height:1.2mm;background:var(--verde-m);margin:6mm 0"></div>
+    <h1 style="font-size:34pt;font-weight:700;line-height:1.1">Construção do MVP</h1>
+    <p style="font-size:15pt;margin-top:4mm;opacity:.9">
+      Fluxo de 3 telas da funcionalidade principal
+    </p>
+    <p style="font-size:11pt;margin-top:12mm;opacity:.8;line-height:1.7">
+      AgroSense, plataforma de irrigação inteligente para o semiárido cearense<br>
+      Universidade Federal do Ceará, Campus de Crateús<br>
+      Vilmar Faustino do Nascimento, Ana Jamilly Almeida Teixeira, Ana Letícia Alves Sousa,
+      Eduarda e Profa. Antonia Jamille de Oliveira
+    </p>
+  </div>
+</section>
+
+<!-- 2. JORNADA CRITICA -->
+<section class="slide">
+  <div class="head"><h2>Jornada crítica do usuário</h2><span class="tag">Entrada, ação, resultado</span></div>
+  <div class="body">
+    <div class="note">
+      <div class="nt">Tarefa número 1 do agricultor</div>
+      <p>Decidir, todo dia de manhã, se precisa irrigar a lavoura e por quanto tempo.
+         Hoje essa decisão é tomada no olho, sem nenhuma informação sobre o estado real do solo,
+         e é ela que separa a colheita da perda.</p>
+    </div>
+    <div class="grid3" style="margin-top:5mm">
+      <div class="card">
+        <div class="kicker">1. Ponto de partida</div>
+        <p style="font-weight:700;margin-bottom:2mm">O gatilho</p>
+        <p class="sm muted">Às 5h30 o agricultor recebe a mensagem no WhatsApp e abre a tela da lavoura.
+           O sensor já leu o solo às 5h00. Ele vê umidade, temperatura e o alerta de solo abaixo do ideal.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">2. Caminho feliz</div>
+        <p style="font-weight:700;margin-bottom:2mm">A ação central</p>
+        <p class="sm muted">Um toque abre a recomendação do dia com o tempo de irrigação, o horário
+           e os três motivos em linguagem simples. Um segundo toque confirma. São dois cliques, não dez.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">3. Chegada</div>
+        <p style="font-weight:700;margin-bottom:2mm">A recompensa</p>
+        <p class="sm muted">A tela confirma a irrigação e mostra quanta água ele deixou de gastar,
+           no dia e no mês. O valor entregue vira número visível, não promessa.</p>
+      </div>
+    </div>
+    <div style="margin-top:6mm;background:var(--verde-l);border-radius:6px;padding:5mm 6mm">
+      <p style="font-weight:700;color:var(--verde);font-size:11pt">
+        Estado do solo e alerta &nbsp;&rarr;&nbsp; Recomendação e confirmação &nbsp;&rarr;&nbsp; Água economizada
+      </p>
+      <p class="sm muted" style="margin-top:2mm">
+        A core feature validada por este fluxo é a recomendação diária de irrigação:
+        se o agricultor confia nela e a executa, o produto funciona. Todo o resto do sistema
+        existe para sustentar esses dois toques.
+      </p>
+    </div>
+  </div>
+  <div class="num">2</div>
+</section>
+
+<!-- 3. FLUXO DAS 3 TELAS -->
+<section class="slide">
+  <div class="head"><h2>Fluxo das 3 telas</h2><span class="tag">Entregável da atividade</span></div>
+  <div class="body" style="padding-top:6mm">
+    <div class="flowrow">
+
+      <div>
+        <div class="caplbl">Tela 1, Entrada<span>Minha lavoura</span></div>
+        <div class="phone">
+          <div class="status"><span>5:32</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
+          <div class="phead g">
+            <div class="t">AgroSense</div>
+            <div class="s">Sítio Boa Esperança, Crateús, CE</div>
+          </div>
+          <div class="scr">
+            <div class="pc">
+              <div class="row">
+                <div>
+                  <div class="lbl">Umidade do solo</div>
+                  <div class="val">34%</div>
+                </div>
+                <span class="pill warn">ABAIXO DO IDEAL</span>
+              </div>
+              <div class="sub">Ideal para feijão-caupi nesta fase: 45%. Temperatura do solo: 31 graus.</div>
+            </div>
+            <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
+              <div class="lbl">Recomendação de hoje</div>
+              <div class="val">Irrigar 25 min</div>
+              <div class="sub">Começar às 6h00. Solo seco e sem chuva prevista para as próximas 48 horas.</div>
+            </div>
+            <div class="pc">
+              <div class="lbl">Previsão, 5 dias</div>
+              <div class="fc">
+                <div><div class="d">Seg</div><div class="i">&#9728;</div><div class="m">34&deg;</div></div>
+                <div><div class="d">Ter</div><div class="i">&#9728;</div><div class="m">35&deg;</div></div>
+                <div><div class="d">Qua</div><div class="i">&#9925;</div><div class="m">33&deg;</div></div>
+                <div><div class="d">Qui</div><div class="i">&#9926;</div><div class="m">29&deg;</div></div>
+                <div><div class="d">Sex</div><div class="i">&#9925;</div><div class="m">31&deg;</div></div>
+              </div>
+            </div>
+            <div class="pc">
+              <div class="lbl">Últimas irrigações</div>
+              <div class="hist"><span>Ontem, 6h00</span><span>20 min</span></div>
+              <div class="hist"><span>Anteontem</span><span>sem irrigação</span></div>
+              <div class="hist"><span>27 de agosto</span><span>25 min</span></div>
+            </div>
+            <div class="btn">Ver recomendação</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrow">&rarr;</div>
+
+      <div>
+        <div class="caplbl">Tela 2, Interação<span>Recomendação de hoje</span></div>
+        <div class="phone">
+          <div class="status"><span>5:33</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
+          <div class="phead b">
+            <div class="t">Recomendação de hoje</div>
+            <div class="s">30 de agosto, sábado</div>
+          </div>
+          <div class="scr">
+            <div class="pc" style="background:var(--azul-l);border-color:#bcd3ee">
+              <div class="lbl">Tempo de irrigação</div>
+              <div class="val b">25 minutos</div>
+              <div class="sub">Início recomendado: 6h00. Cerca de 980 litros no canteiro de feijão-caupi.</div>
+            </div>
+            <div class="pc">
+              <div class="lbl">Por que hoje</div>
+              <div class="hist"><span>Umidade do solo</span><span>34%, ideal 45%</span></div>
+              <div class="hist"><span>Temperatura máxima</span><span>34 graus</span></div>
+              <div class="hist"><span>Chuva em 48h</span><span>0 mm</span></div>
+            </div>
+            <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
+              <div class="lbl">Impacto estimado</div>
+              <div class="val" style="font-size:11pt">420 L a menos</div>
+              <div class="sub">Comparado ao tempo que costuma ser usado nesta lavoura, 40 minutos.</div>
+            </div>
+            <div class="btn">Confirmar irrigação</div>
+            <div class="btn ghost">Ver histórico completo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrow">&rarr;</div>
+
+      <div>
+        <div class="caplbl">Tela 3, Sucesso<span>Irrigação confirmada</span></div>
+        <div class="phone">
+          <div class="status"><span>6:02</span><span>vivo &nbsp; 4G &nbsp; 81%</span></div>
+          <div class="phead g">
+            <div class="t">Irrigação confirmada</div>
+            <div class="s">Executada às 6h00, 25 minutos</div>
+          </div>
+          <div class="scr">
+            <div class="check">&#10003;</div>
+            <div class="duo" style="margin-bottom:2.4mm">
+              <div class="pc">
+                <div class="lbl">Hoje</div>
+                <div class="val">420 L</div>
+                <div class="sub">economizados</div>
+              </div>
+              <div class="pc">
+                <div class="lbl">Safra</div>
+                <div class="val">+22%</div>
+                <div class="sub">produtividade estimada</div>
+              </div>
+            </div>
+            <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
+              <div class="lbl">Acumulado em agosto</div>
+              <div class="val">62.400 L</div>
+              <div class="sub">Água que ficou no poço, equivalente a 12 carros-pipa de mil litros.</div>
+            </div>
+            <div class="pc">
+              <div class="lbl">Próximos passos</div>
+              <div class="hist"><span>Próxima leitura</span><span>6h30</span></div>
+              <div class="hist"><span>Chuva prevista</span><span>quinta, 18 mm</span></div>
+            </div>
+            <div class="btn ghost">Compartilhar resultado</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="num">3</div>
+</section>
+
+<!-- 4. TELA 1 DETALHE -->
+<section class="slide">
+  <div class="head"><h2>Tela 1, Entrada</h2><span class="tag">Onde o agricultor entende o próximo passo</span></div>
+  <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
+    <div class="phone lg">
+      <div class="status"><span>5:32</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
+      <div class="phead g">
+        <div class="t">AgroSense</div>
+        <div class="s">Sítio Boa Esperança, Crateús, CE</div>
+      </div>
+      <div class="scr">
+        <div class="pc">
+          <div class="row">
+            <div><div class="lbl">Umidade do solo</div><div class="val">34%</div></div>
+            <span class="pill warn">ABAIXO DO IDEAL</span>
+          </div>
+          <div class="sub">Ideal para feijão-caupi nesta fase: 45%. Temperatura do solo: 31 graus.</div>
+        </div>
+        <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
+          <div class="lbl">Recomendação de hoje</div>
+          <div class="val">Irrigar 25 min</div>
+          <div class="sub">Começar às 6h00. Solo seco e sem chuva prevista para as próximas 48 horas.</div>
+        </div>
+        <div class="pc">
+          <div class="lbl">Previsão, 5 dias</div>
+          <div class="fc">
+            <div><div class="d">Seg</div><div class="i">&#9728;</div><div class="m">34&deg;</div></div>
+            <div><div class="d">Ter</div><div class="i">&#9728;</div><div class="m">35&deg;</div></div>
+            <div><div class="d">Qua</div><div class="i">&#9925;</div><div class="m">33&deg;</div></div>
+            <div><div class="d">Qui</div><div class="i">&#9926;</div><div class="m">29&deg;</div></div>
+            <div><div class="d">Sex</div><div class="i">&#9925;</div><div class="m">31&deg;</div></div>
+          </div>
+        </div>
+        <div class="pc">
+          <div class="lbl">Últimas irrigações</div>
+          <div class="hist"><span>Ontem, 6h00</span><span>20 min</span></div>
+          <div class="hist"><span>Anteontem</span><span>sem irrigação</span></div>
+          <div class="hist"><span>27 de agosto</span><span>25 min</span></div>
+        </div>
+        <div class="btn">Ver recomendação</div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <div class="note">
+        <div class="nt">Função da tela</div>
+        <p>Responder em três segundos a pergunta que o agricultor já tem na cabeça quando acorda:
+           a terra está seca. Nada precisa ser buscado ou filtrado, a informação chega pronta.</p>
+      </div>
+      <div class="note">
+        <div class="nt">O que aparece e por quê</div>
+        <p>Umidade em porcentagem com o valor ideal ao lado, porque o número sozinho não diz nada.
+           O alerta em vermelho carrega a urgência. A recomendação já vem visível antes de qualquer toque,
+           porque o agricultor de 60 anos não vai navegar atrás dela.</p>
+      </div>
+      <div class="note">
+        <div class="nt">Previsão e histórico</div>
+        <p>Os cinco dias vêm da API do INMET pela estação de Crateús. O histórico das últimas irrigações
+           existe para dar continuidade, o agricultor precisa enxergar que o sistema acompanha a lavoura
+           dele e não manda a mesma mensagem todo dia.</p>
+      </div>
+      <div class="note" style="border-left-color:var(--ambar)">
+        <div class="nt">Decisão de projeto</div>
+        <p>Nenhum termo técnico na interface. Não aparece LoRa, sensor FC-28, Random Forest nem
+           condutividade elétrica. A validação da hipótese 6 mostrou que a confiança vem da linguagem
+           simples e do resultado concreto, não da compreensão da tecnologia.</p>
+      </div>
+    </div>
+  </div>
+  <div class="num">4</div>
+</section>
+
+<!-- 5. TELA 2 DETALHE -->
+<section class="slide">
+  <div class="head"><h2>Tela 2, Interação</h2><span class="tag">Onde a solução acontece</span></div>
+  <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
+    <div class="phone lg">
+      <div class="status"><span>5:33</span><span>vivo &nbsp; 4G &nbsp; 82%</span></div>
+      <div class="phead b">
+        <div class="t">Recomendação de hoje</div>
+        <div class="s">30 de agosto, sábado</div>
+      </div>
+      <div class="scr">
+        <div class="pc" style="background:var(--azul-l);border-color:#bcd3ee">
+          <div class="lbl">Tempo de irrigação</div>
+          <div class="val b">25 minutos</div>
+          <div class="sub">Início recomendado: 6h00. Cerca de 980 litros no canteiro de feijão-caupi.</div>
+        </div>
+        <div class="pc">
+          <div class="lbl">Por que hoje</div>
+          <div class="hist"><span>Umidade do solo</span><span>34%, ideal 45%</span></div>
+          <div class="hist"><span>Temperatura máxima</span><span>34 graus</span></div>
+          <div class="hist"><span>Chuva em 48h</span><span>0 mm</span></div>
+        </div>
+        <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
+          <div class="lbl">Impacto estimado</div>
+          <div class="val" style="font-size:11pt">420 L a menos</div>
+          <div class="sub">Comparado ao tempo que costuma ser usado nesta lavoura, 40 minutos.</div>
+        </div>
+        <div class="btn">Confirmar irrigação</div>
+        <div class="btn ghost">Ver histórico completo</div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <div class="note">
+        <div class="nt">Função da tela</div>
+        <p>Concentrar a decisão em um único botão. Toda a inteligência do sistema, sensor, previsão
+           climática e parâmetros da Embrapa, termina em um número de minutos e um horário.</p>
+      </div>
+      <div class="note">
+        <div class="nt">Os três motivos</div>
+        <p>O bloco "por que hoje" existe para sustentar a confiança sem exigir entendimento técnico.
+           São três linhas que o agricultor consegue conferir com a própria experiência: a terra está seca,
+           o dia vai ser quente, não vai chover. Quando o sistema erra, é por aí que ele percebe.</p>
+      </div>
+      <div class="note">
+        <div class="nt">Confirmação como dado</div>
+        <p>O toque em confirmar alimenta o backend e serve de rótulo para o modelo. Na hipótese 1
+           ficou claro que agricultores mais velhos não respondem mensagem, então a leitura do sensor
+           logo depois do horário indicado também conta como execução.</p>
+      </div>
+      <div class="note" style="border-left-color:var(--ambar)">
+        <div class="nt">Decisão de projeto</div>
+        <p>O impacto em litros aparece antes da confirmação, não depois. A validação da hipótese 2
+           mostrou que a disposição de pagar cresce com a prova visível de economia, então a economia
+           precisa estar na frente do agricultor no momento em que ele decide.</p>
+      </div>
+    </div>
+  </div>
+  <div class="num">5</div>
+</section>
+
+<!-- 6. TELA 3 DETALHE -->
+<section class="slide">
+  <div class="head"><h2>Tela 3, Sucesso</h2><span class="tag">Confirmação de que o valor foi entregue</span></div>
+  <div class="body" style="display:flex;flex-direction:row;align-items:center;gap:12mm">
+    <div class="phone lg">
+      <div class="status"><span>6:02</span><span>vivo &nbsp; 4G &nbsp; 81%</span></div>
+      <div class="phead g">
+        <div class="t">Irrigação confirmada</div>
+        <div class="s">Executada às 6h00, 25 minutos</div>
+      </div>
+      <div class="scr">
+        <div class="check">&#10003;</div>
+        <div class="duo" style="margin-bottom:2.4mm">
+          <div class="pc"><div class="lbl">Hoje</div><div class="val">420 L</div><div class="sub">economizados</div></div>
+          <div class="pc"><div class="lbl">Safra</div><div class="val">+22%</div><div class="sub">produtividade estimada</div></div>
+        </div>
+        <div class="pc" style="background:var(--verde-l);border-color:#bde3d4">
+          <div class="lbl">Acumulado em agosto</div>
+          <div class="val">62.400 L</div>
+          <div class="sub">Água que ficou no poço, equivalente a 12 carros-pipa de mil litros.</div>
+        </div>
+        <div class="pc">
+          <div class="lbl">Próximos passos</div>
+          <div class="hist"><span>Próxima leitura</span><span>6h30</span></div>
+          <div class="hist"><span>Chuva prevista</span><span>quinta, 18 mm</span></div>
+        </div>
+        <div class="btn ghost">Compartilhar resultado</div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <div class="note">
+        <div class="nt">Função da tela</div>
+        <p>Fechar o ciclo. O agricultor precisa terminar a interação sabendo exatamente o que ganhou,
+           senão a recomendação vira mais uma mensagem que ele ignora na semana seguinte.</p>
+      </div>
+      <div class="note">
+        <div class="nt">Litros, não porcentagem</div>
+        <p>O acumulado do mês é traduzido em carros-pipa porque essa é a unidade que o agricultor do
+           semiárido usa para pensar em água. Porcentagem é linguagem de relatório, carro-pipa é
+           linguagem de quem já pagou por um.</p>
+      </div>
+      <div class="note">
+        <div class="nt">Retenção e venda</div>
+        <p>O botão de compartilhar existe por causa da hipótese 4: a venda acontece agricultor por
+           agricultor, e o vizinho que vê o resultado do primeiro é o canal mais barato que temos.
+           Esse número compartilhado é material de venda produzido pelo próprio cliente.</p>
+      </div>
+      <div class="note" style="border-left-color:var(--ambar)">
+        <div class="nt">Ressalva honesta</div>
+        <p>Os valores de 420 litros por dia e 22% de produtividade são projeções construídas a partir
+           dos parâmetros da Embrapa Semiárido e das entrevistas. A medição real começa com os
+           três kits em campo em Crateús, com medidor de vazão e linha de base de 30 dias.</p>
+      </div>
+    </div>
+  </div>
+  <div class="num">6</div>
+</section>
+
+<!-- 7. FECHAMENTO -->
+<section class="slide">
+  <div class="head"><h2>O que este MVP valida</h2><span class="tag">Próximo passo depois das telas</span></div>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <h3>Hipóteses que o fluxo testa</h3>
+        <ul>
+          <li><b>H1, adesão.</b> O agricultor executa a recomendação diária sem treinamento prévio.
+              Medida pela taxa de execução em 15 dias com 10 agricultores de Crateús.</li>
+          <li><b>H6, confiança.</b> Ele segue a orientação sem precisar entender a tecnologia,
+              desde que a linguagem seja direta. Medida por nota de 1 a 5 e pelas objeções registradas.</li>
+          <li><b>H2, disposição de pagar.</b> Ver a economia em litros antes de confirmar aumenta a
+              percepção de valor e sustenta a assinatura de 30 reais por mês.</li>
+        </ul>
+        <h3 style="margin-top:6mm">O que ficou de fora de propósito</h3>
+        <ul>
+          <li>Cadastro, login e configuração de cultura, resolvidos na instalação do kit pela equipe.</li>
+          <li>Gráficos de série histórica e relatórios, que servem à cooperativa, não ao agricultor.</li>
+          <li>Previsão de pragas e câmera de solo, classificadas como monitorar na matriz de hipóteses.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Como estas telas viram produto</h3>
+        <div class="card" style="margin-bottom:4mm">
+          <p class="sm"><b>Canal real de entrega.</b> As telas descrevem a lógica completa,
+             mas o agricultor recebe o conteúdo por WhatsApp às 5h30, com SMS de reserva onde o sinal cai.
+             O aplicativo é a camada de consulta, não a porta de entrada.</p>
+        </div>
+        <div class="card" style="margin-bottom:4mm">
+          <p class="sm"><b>Cadeia técnica por trás de cada número.</b> Sensores FC-28 e DS18B20 no ESP32
+             leem o solo a cada 30 minutos, o rádio LoRa leva o dado até o gateway sem depender de
+             internet no campo, e o backend em FastAPI cruza a leitura com a previsão do INMET e os
+             limiares da Embrapa para gerar a recomendação.</p>
+        </div>
+        <div class="card">
+          <p class="sm"><b>Cronograma.</b> Firmware e backend mínimo até a Demolation de agosto de 2026,
+             com três kits instalados em propriedades de feijão-caupi em Crateús. A expansão para 15
+             propriedades acontece entre setembro e dezembro, e os primeiros assinantes pagantes
+             fazem parte da meta do Demoday.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="num">7</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* mockups de celular */
+.phone{width:66mm;height:126mm;border:2.2mm solid #111827;border-radius:7mm;background:#fff;
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.phone.lg{width:74mm;height:134mm}
+.status{height:4.5mm;background:#111827;color:#fff;font-size:5.5pt;display:flex;
+  align-items:center;justify-content:space-between;padding:0 3mm}
+.phead{padding:3mm 3.5mm;color:#fff}
+.phead.g{background:var(--verde)} .phead.b{background:var(--azul)}
+.phead .t{font-size:8.5pt;font-weight:700}
+.phead .s{font-size:6pt;opacity:.85;margin-top:.6mm}
+.scr{flex:1;padding:3mm;background:#F5F7F6;overflow:hidden}
+.pc{background:#fff;border:.3mm solid #e5e7eb;border-radius:2mm;padding:2.6mm;margin-bottom:2.4mm}
+.pc .lbl{font-size:5.8pt;text-transform:uppercase;letter-spacing:.6px;color:#8a8a86;font-weight:700}
+.pc .val{font-size:14pt;font-weight:700;color:var(--verde);line-height:1.1}
+.pc .val.b{color:var(--azul)}
+.pc .sub{font-size:6.3pt;color:#5F5E5A;line-height:1.35;margin-top:1mm}
+.pill{display:inline-block;font-size:5.6pt;font-weight:700;padding:.8mm 1.8mm;border-radius:3mm}
+.pill.warn{background:var(--verm-l);color:var(--verm)}
+.pill.ok{background:var(--verde-l);color:var(--verde)}
+.row{display:flex;justify-content:space-between;align-items:flex-end}
+.btn{display:block;text-align:center;font-size:7.5pt;font-weight:700;color:#fff;
+  background:var(--verde-m);border-radius:2mm;padding:2.6mm 0;margin-top:1mm}
+.btn.b{background:var(--azul)}
+.btn.ghost{background:#fff;color:var(--cm);border:.3mm solid #d6d5d0}
+.fc{display:flex;justify-content:space-between;text-align:center;margin-top:1.4mm}
+.fc div{flex:1}
+.fc .d{font-size:5.6pt;color:#8a8a86}
+.fc .i{font-size:9pt;line-height:1.2}
+.fc .m{font-size:5.8pt;font-weight:700;color:var(--cz)}
+.hist{font-size:6pt;color:#5F5E5A;display:flex;justify-content:space-between;
+  padding:1.1mm 0;border-bottom:.2mm dashed #e5e7eb}
+.hist:last-child{border-bottom:none}
+.check{width:14mm;height:14mm;border-radius:50%;background:var(--verde-m);color:#fff;
+  font-size:16pt;font-weight:700;display:flex;align-items:center;justify-content:center;
+  margin:2mm auto 3mm}
+.duo{display:flex;gap:2.4mm}
+.duo .pc{flex:1;margin-bottom:0;text-align:center}
+.duo .val{font-size:11pt}
+.flowrow{display:flex;align-items:center;justify-content:center;gap:6mm}
+.arrow{font-size:20pt;color:var(--verde-m);font-weight:700}
+.caplbl{text-align:center;font-size:8.5pt;font-weight:700;color:var(--verde);margin-bottom:2mm}
+.caplbl span{display:block;font-size:7pt;font-weight:400;color:var(--cm);margin-top:.6mm}
+.note{border-left:2.5mm solid var(--verde-m);background:#fff;padding:3mm 4mm;margin-bottom:3mm;
+  border-radius:0 3px 3px 0;border-top:1px solid #e5e7eb;border-right:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb}
+.note .nt{font-size:9.5pt;font-weight:700;color:var(--cz);margin-bottom:1mm}
+.note p{font-size:9pt;color:var(--cm);line-height:1.45}
