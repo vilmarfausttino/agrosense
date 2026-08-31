@@ -12,9 +12,19 @@
 ## 0. META: COMO USAR ESTE ARQUIVO
 
 Este arquivo substitui a memória de conversa. É um "project bible" vivo.
-Cada sessão começa com: `cat AgroSense.md` ou colando o conteúdo no terminal.
 Ao final de cada sessão de trabalho relevante, atualize as seções afetadas:
-STATUS ATUAL, DOCUMENTOS ENTREGUES e REGISTRO DE DECISÕES.
+STATUS ATUAL, DOCUMENTOS ENTREGUES, REGISTRO DE DECISÕES e o CONJUNTO DE NÚMEROS.
+
+**Onde o projeto vive:** repositório `vilmarfausttino/agrosense` no GitHub,
+branch `claude/pensive-ritchie-nb5uq0`. Este arquivo está versionado na raiz,
+então cada sessão começa com `cat AgroSense.md` dentro do repositório clonado,
+sem precisar colar nada no terminal. Estrutura:
+
+```
+AgroSense.md            este arquivo, fonte única de contexto
+entregaveis/            documentos do programa em HTML e PDF, mais o build.sh
+marca/                  logo em SVG e PNG, com o README de uso da marca
+```
 
 Vilmar (o usuário) trabalha com Claude Code no terminal para:
 - Gerar documentos LaTeX (Beamer), PPTX (pptxgenjs) e Word (python-docx)
@@ -59,11 +69,14 @@ Programa de aceleração de startups do Hub Corredores Digitais (CE), vinculado 
 - Atividades: Análise Concorrencial, Proposta de Valor, BMC, Validação do Problema
 - Entregáveis: 4 PowerPoints + 1 Beamer PDF (Matriz CSD, Matriz de Hipóteses, 6 Cartões de Teste, 6 Cartões de Aprendizado)
 
-**Fase 3 — Construção do MVP (concluída):**
-- Atividade 1: Mockup das 3 Telas Principais (MVP)
-- Atividade 2: Pitch de 14 slides (estrutura obrigatória do programa)
-- Entregável: 1 Beamer PDF combinado (MVP + Pitch)
+**Fase 3 — Construção do MVP (concluída, refeita em 30/08/2026):**
+- Atividade 1: Construção do MVP, fluxo de 3 telas da funcionalidade principal
+- Atividade 2: Pitch na estrutura obrigatória de 14 slides
+- Entregáveis atuais: dois arquivos HTML paginados em 16:9, com PDF gerado a partir deles
+- A versão anterior era um único Beamer PDF combinado, substituída pelos arquivos em HTML
 - Submissão: via Google Forms disponibilizado pelo programa
+- Observação: este é o pitch de teste. O pitch definitivo será feito em novembro de 2026,
+  já com os números medidos em campo
 
 **Marcos do programa:**
 - **DEMOLATION:** agosto de 2026 — apresentar MVP com kit físico em operação
@@ -501,28 +514,42 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
   - Slides 10 a 15: Cartões de Aprendizado H1 a H6 (roxo, projeções reais)
 - Formato: Beamer pdfLaTeX
 
-### Bora Criar — Fase 3
+### Bora Criar — Fase 3 (versão vigente, agosto de 2026)
 
-**AgroSense_MVP_Pitch.pdf** (e .tex)
-- Conteúdo: 16 slides em Beamer LaTeX
-  - Slide 1: Capa do MVP
-  - Slide 2: Fluxo das 3 telas (phone frames desenhados em TikZ com conteúdo real)
-  - Slide 3: Capa do Pitch (fundo verde escuro, tipografia grande)
-  - Slides 4 a 16: Pitch de 14 slides (estrutura obrigatória do programa)
-    1. Capa
-    2. O Problema
-    3. Público-Alvo
-    4. Tamanho e Projeção de Mercado (funil TikZ)
-    5. Proposta de Valor
-    6. Fluxo do Negócio (3 fontes de receita)
-    7. Como Funciona: Pipeline (5 passos TikZ)
-    8. Como Implementar: Viabilidade (4 fases)
-    9. MVP e Desenvolvimento Tecnológico
-    10. Diferencial Competitivo (tabela + Data Flywheel)
-    11. Benefícios para o Cliente (4 cards + ODS)
-    12. Próximos Passos (3 marcos)
-    13. Equipe Multidisciplinar (5 membros)
-    14. Agradecimento
+Ficam em `entregaveis/`. São HTML paginado em 16:9, com o PDF gerado pelo Chromium.
+Substituem o antigo `AgroSense_MVP_Pitch.pdf` em Beamer, que não deve mais ser usado.
+
+**AgroSense_MVP_3Telas.html** (e .pdf), 7 páginas
+1. Capa
+2. Jornada crítica do usuário, no formato entrada, ação e resultado exigido pela ferramenta
+3. Fluxo das 3 telas lado a lado, em mockup de celular desenhado em HTML e CSS
+4. Tela 1, Entrada, com as decisões de projeto
+5. Tela 2, Interação, com as decisões de projeto
+6. Tela 3, Sucesso, com a origem dos números
+7. O que este MVP valida e o que ficou de fora de propósito
+
+Tarefa número 1 definida: decidir de manhã se irriga e por quanto tempo, em dois toques.
+
+**AgroSense_Pitch.html** (e .pdf), 14 slides na ordem obrigatória do programa
+1. Capa
+2. O Problema
+3. Público-Alvo
+4. Tamanho e Projeção de Mercado, em funil
+5. Proposta de Valor
+6. Fluxo do Negócio, 3 fontes de receita
+7. Como Funciona, pipeline de 5 passos
+8. Como Implementar, viabilidade em 4 fases
+9. MVP e Desenvolvimento Tecnológico
+10. Diferencial Competitivo, tabela e Data Flywheel
+11. Benefícios para o Cliente e ODS
+12. Próximos Passos, 3 marcos
+13. Equipe Multidisciplinar, conforme o Anexo IV
+14. Agradecimento
+
+**Marca AgroSense**, em `marca/`
+Gota de água com folha recortada em negativo. Cinco arquivos em SVG e PNG:
+símbolo verde, símbolo branco, assinatura horizontal verde, assinatura branca e
+assinatura em bloco verde. Detalhes de uso no `marca/README.md`.
 
 ### Empreende UFC 2026
 
@@ -553,13 +580,16 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
 
 ### O que está concluído
 
-- [x] Todos os documentos do Bora Criar Fases 1, 2 e 3 entregues
-- [x] Pitch de 14 slides pronto e alinhado com o template do programa
-- [x] Mockup das 3 telas do MVP documentado em Beamer
+- [x] Documentos do Bora Criar Fases 1, 2 e 3 entregues
+- [x] Fase 3 refeita em HTML: MVP de 3 telas em 7 páginas e pitch de 14 slides
+- [x] Pipeline de build reproduzível, `entregaveis/build.sh`, HTML para PDF pelo Chromium
+- [x] Marca criada e aplicada nos dois entregáveis, com arquivos soltos em `marca/`
+- [x] Equipe corrigida conforme o Anexo IV vigente a partir de 16/05/2026
+- [x] Conjunto de números unificado e coerente, registrado na seção 15
 - [x] Validação do Problema com 6 hipóteses em Cartões de Teste e Aprendizado
 - [x] Análise concorrencial vs Agrosmart e IrriGate
 - [x] Business Model Canvas completo
-- [x] Proposta de Valor mapeada (quadrado + círculo)
+- [x] Proposta de Valor mapeada
 - [x] Inscrição no Empreende UFC 2026 com Formulário Anexo I
 - [x] Resumo para os Encontros Universitários 2026 produzido
 - [x] Apresentação Reveal.js com protótipo interativo
@@ -567,6 +597,8 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
 - [x] Checklist de startup (13/16)
 
 ### O que ainda não foi feito (produto técnico real)
+
+Nada da lista abaixo mudou nesta sessão. O trabalho foi todo de documento.
 
 - [ ] Firmware do ESP32 (leitura FC-28 + DS18B20 + transmissão LoRa)
 - [ ] Gateway LoRa no Raspberry Pi (recepção e envio ao backend)
@@ -583,8 +615,19 @@ Mais kits instalados → mais dados do semiárido CE → modelo mais preciso →
 
 - [x] Sobrenome da Eduarda confirmado pelo Anexo IV: Maria Eduarda Jesus de Mendonça
 - [x] Campo "Unidade" confirmado pelo Anexo IV: Estruturas
-- [ ] Submissão do resumo nos EU2026 (texto está pronto, falta colar no formulário)
-- [ ] Submissão do MVP + Pitch via Google Forms do programa Bora Criar
+- [ ] Submissão do resumo nos EU2026 (texto pronto, falta colar no formulário)
+- [ ] Submissão do MVP e do Pitch via Google Forms do programa Bora Criar
+- [ ] Conferir a autoria dos EU2026 contra o Anexo IV: a seção 1 ainda registra o Vilmar
+      como autor principal com a equipe antiga, e no Anexo IV a líder é a Francisca Mirele
+- [ ] Definir se os documentos antigos das Fases 1 e 2 precisam ser corrigidos, porque
+      listam Vilmar como líder bolsista e citam Ana Jamilly, que saiu da equipe
+
+### Próxima sessão, ponto de partida sugerido
+
+1. Firmware do ESP32, que é a etapa 1 do roadmap da seção 10 e trava todo o resto
+2. Ou correção retroativa dos documentos das Fases 1 e 2 com a equipe do Anexo IV
+3. Em novembro, refazer o pitch com os números reais medidos em campo,
+   substituindo o conjunto da seção 15
 
 ---
 
@@ -670,7 +713,67 @@ message = client.messages.create(
 
 ## 11. NOTAS TÉCNICAS — PRODUÇÃO DE DOCUMENTOS
 
+### HTML paginado para PDF (método usado na Fase 3)
+
+Método atual para slides. Substituiu o Beamer nos entregáveis do programa porque
+o controle de layout é mais direto e o QA visual é mais rápido.
+
+**Como funciona:**
+- Cada slide é uma `<section class="slide">` de 297mm por 167mm, que é 16:9
+- `@page { size: 297mm 167mm; margin: 0 }` faz o PDF sair com uma página por slide
+- `print-color-adjust: exact` preserva os fundos coloridos na impressão
+- `.body { height: 152mm; display: flex; flex-direction: column; justify-content: center }`
+  centraliza o conteúdo e evita o slide com tudo empilhado no topo
+- Medidas em mm e pt no layout, px apenas dentro dos mockups de celular
+
+**Geração do PDF:**
+```sh
+chrome --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
+       --print-to-pdf=saida.pdf "file://$PWD/entrada.html"
+```
+Neste ambiente o binário fica em `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`.
+O script `entregaveis/build.sh` monta os HTML a partir das partes e imprime os dois PDF.
+
+**QA visual, sem depender de poppler:**
+```python
+import pymupdf
+d = pymupdf.open('saida.pdf')
+for i, pg in enumerate(d):
+    pg.get_pixmap(dpi=110).save(f'qa-{i+1:02d}.png')
+```
+Instalar com `pip install pymupdf --break-system-packages`. Depois inspecionar cada PNG.
+Conferir sempre: número de páginas igual ao número de slides, porque página em branco
+a mais significa conteúdo estourando a altura.
+
+**Armadilhas encontradas:**
+1. `display:flex` inline em um elemento que já tem `flex-direction: column` na classe
+   não vira linha. É preciso declarar `flex-direction: row` explicitamente
+2. Mockup alto demais encosta na borda inferior da página e a borda some no PDF.
+   Manter o conteúdo dentro de 152mm de altura útil
+3. Emojis coloridos não renderizam bem. Usar entidades HTML como `&#9728;` e `&#9925;`
+4. Fontes de CDN não são necessárias. A fonte do sistema evita dependência de rede
+5. Manter os arquivos autocontidos, com o CSS em `<style>` no próprio HTML,
+   para que o PDF possa ser gerado em qualquer máquina
+
+### Marca
+
+Arquivos em `marca/`, criados em agosto de 2026. A marca é uma gota de água com uma folha
+recortada em negativo, de traço único, sem gradiente nem sombra.
+
+- Símbolo: `agrosense_marca.svg` e a versão branca para fundo escuro
+- Assinatura horizontal: `agrosense_logo.svg`, versão branca e versão em bloco verde
+- PNG de 1024 px de largura com fundo transparente para cada arquivo
+- Cores: verde principal `#085041`, verde médio `#1D9E75`
+- Área livre mínima em volta: a largura da própria gota
+- Tamanho mínimo: 16 px na tela, 6 mm impresso
+
+Nos entregáveis HTML a marca entra como `<symbol id="as-mark">` no arquivo `_defs.part`,
+com `fill: currentColor`, o que faz o símbolo herdar a cor do contexto: branco no
+cabeçalho verde e verde escuro sobre fundo claro, sem precisar de duas versões.
+
 ### LaTeX Beamer — Regras que Funcionam (aprendidas na prática)
+
+Mantido como referência. Os entregáveis da Fase 3 não usam mais Beamer.
 
 **Ambiente:**
 - Compilador: pdfLaTeX (não XeLaTeX, não LuaLaTeX)
@@ -773,22 +876,6 @@ message = client.messages.create(
 \definecolor{CVermL}{HTML}{FEF2F2}   % vermelho claro
 ```
 
-### Marca
-
-Arquivos em `marca/`, criados em agosto de 2026. A marca é uma gota de água com uma folha
-recortada em negativo, de traço único, sem gradiente nem sombra.
-
-- Símbolo: `agrosense_marca.svg` e a versão branca para fundo escuro
-- Assinatura horizontal: `agrosense_logo.svg`, versão branca e versão em bloco verde
-- PNG de 1024 px de largura com fundo transparente para cada arquivo
-- Cores: verde principal `#085041`, verde médio `#1D9E75`
-- Área livre mínima em volta: a largura da própria gota
-- Tamanho mínimo: 16 px na tela, 6 mm impresso
-
-Nos entregáveis HTML a marca entra como `<symbol id="as-mark">` no arquivo `_defs.part`,
-com `fill: currentColor`, o que faz o símbolo herdar a cor do contexto: branco no
-cabeçalho verde e verde escuro sobre fundo claro, sem precisar de duas versões.
-
 ### PowerPoint com pptxgenjs (quando necessário)
 
 ```javascript
@@ -838,8 +925,10 @@ cp arquivo.tex /mnt/user-data/outputs/
 - Nunca apresentar suposições como fatos.
 
 **Documentos:**
-- Formato preferido: Beamer LaTeX (não PowerPoint, a menos que solicitado)
-- Quando criar um .tex, sempre compilar e entregar o PDF junto
+- Formato atual para slides: HTML paginado em 16:9, com PDF gerado pelo Chromium
+- Beamer LaTeX segue válido para documento acadêmico, mas não é mais o padrão dos slides
+- Sempre entregar o PDF junto do arquivo fonte, nunca só o fonte
+- Sempre fazer QA visual página a página antes de entregar
 - Nunca deixar texto extrapolar os limites do slide
 - Nunca usar travessões (nem simples nem duplos) em documentos
 - Documentos escritos como se fossem feitos por humano — sem linguagem de IA
@@ -872,6 +961,11 @@ Decisões importantes que não devem ser revertidas sem motivo explícito:
 | Usar frametitle nativo no Beamer | Overlay com current page.north corta o cabeçalho nos slides | Ago 2026 |
 | Não usar \foreach em frames Beamer | Causa "Illegal parameter number" quando o body usa # ou \column | Ago 2026 |
 | Documentos do programa em Beamer LaTeX | Melhor controle tipográfico; Vilmar prefere LaTeX ao PowerPoint | Ago 2026 |
+| Migrar os entregáveis da Fase 3 para HTML paginado | Controle de layout mais direto que TikZ e QA visual mais rápido; o PDF sai do Chromium | Ago 2026 |
+| Equipe conforme o Anexo IV, não conforme documentos antigos | O Anexo IV assinado é o documento oficial: líder é Francisca Mirele, Vilmar é voluntário e Ana Jamilly saiu | Ago 2026 |
+| Conjunto único de números na seção 15 | Os valores antigos se contradiziam entre si; agora toda peça nova puxa da mesma base | Ago 2026 |
+| Números apresentados sem rótulo de projeção | Pitch de teste, com números realistas e derivados; o pitch definitivo de novembro traz os dados medidos | Ago 2026 |
+| Marca: gota com folha em negativo, traço único | Precisa funcionar em preto e branco e a partir de 16 px, sem depender de gradiente | Ago 2026 |
 
 ---
 
@@ -880,7 +974,9 @@ Decisões importantes que não devem ser revertidas sem motivo explícito:
 **Vilmar:**
 - E-mail pessoal: vilmarfaustinok@gmail.com
 - E-mail UFC: vilmarfaustino@alu.ufc.br
-- Matrícula UFC: 09154719305
+- Matrícula UFC: 538743, conforme o Anexo IV
+- O número 09154719305, que constava aqui antes, não é matrícula. Conferir antes de usar
+  em qualquer formulário oficial
 
 **Projeto:**
 - E-mail do projeto (referência nos documentos): agrosense.ufc@gmail.com
@@ -929,5 +1025,13 @@ entre si e foram substituídos por este conjunto.
 ---
 
 *Arquivo criado em: 30 de agosto de 2026*
-*Origem: conversa completa no claude.ai sobre o AgroSense — Empreende UFC 2026 / Bora Criar*
-*Próxima atualização: após sessão de desenvolvimento do firmware ESP32*
+*Origem: conversa completa no claude.ai sobre o AgroSense, Empreende UFC 2026 e Bora Criar*
+
+*Última atualização: 30 de agosto de 2026, sessão de migração para o repositório.*
+*O que mudou nesta sessão: os dois entregáveis da Fase 3 foram refeitos em HTML paginado,*
+*a equipe passou a seguir o Anexo IV, o conjunto de números foi unificado na seção 15,*
+*a marca foi criada e aplicada, e o projeto passou a viver no repositório em vez de*
+*depender de arquivos avulsos.*
+
+*Próxima atualização prevista: sessão de desenvolvimento do firmware ESP32,*
+*ou novembro de 2026, quando o pitch definitivo substituir os números da seção 15.*
